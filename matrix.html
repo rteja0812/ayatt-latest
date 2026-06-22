@@ -173,9 +173,29 @@ footer{background:#080F18;border-top:1px solid var(--border);padding:2.5rem;text
   .phil-grid{grid-template-columns:1fr}
 }
 @media(max-width:720px){
-  .hero-h1{font-size:40px}
+  .hero-h1{font-size:34px}
+  .hero-sub{font-size:15px}
+  .hero-btns{flex-direction:column;align-items:center}
+  .section-pad{padding:4rem 0}
   .cap-grid{grid-template-columns:1fr 1fr}
   .tier-right{grid-template-columns:1fr}
+  .section-title{font-size:26px}
+  .tier-headline{font-size:26px}
+  .intel-grid{grid-template-columns:1fr}
+  nav{padding:0 1.2rem}
+  .section-wrap{padding:0 1.2rem}
+  footer{padding:2rem 1rem}
+}
+@media(max-width:480px){
+  .hero{padding:100px 1.2rem 60px}
+  .hero-h1{font-size:28px}
+  .cap-grid{grid-template-columns:1fr}
+  .tier-tabs{width:100%}
+  .tier-tab{padding:0.6rem 1rem;font-size:12px}
+  .tier-card{grid-template-columns:1fr}
+  .tier-right{grid-template-columns:1fr;border-left:none;border-top:1px solid var(--border-light)}
+  .tier-left{padding:2rem 1.5rem}
+  .tier-right{padding:1.5rem}
 }
 </style>
 </head>

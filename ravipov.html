@@ -34,23 +34,23 @@ nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(13,30,48,0.9
 /* HERO */
 .hero{background:var(--navy);padding:140px 2rem 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse at center top,rgba(62,180,224,0.18) 0%,transparent 70%);pointer-events:none}
-.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;text-align:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;color:var(--sky);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.4rem}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';display:block;width:24px;height:1px;background:var(--sky);opacity:0.6}
 .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,68px);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:var(--white);margin-bottom:1.2rem}
 .hero-h1 em{font-style:italic;color:var(--sky)}
-.hero-sub{font-size:17px;color:var(--steel2);max-width:580px;line-height:1.7;font-weight:300;margin-bottom:2rem}
-.hero-meta{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.hero-stat{text-align:left}
+.hero-sub{font-size:17px;color:var(--steel2);max-width:580px;line-height:1.7;font-weight:300;margin-bottom:2rem;margin-left:auto;margin-right:auto}
+.hero-meta{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}
 .hero-stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--sky);line-height:1;letter-spacing:-1px}
 .hero-stat-label{font-size:11px;color:var(--steel);margin-top:2px;letter-spacing:0.04em}
 .hero-divider{width:1px;height:40px;background:var(--border)}
-.subscribe-btn{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--white);padding:0.75rem 1.6rem;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:0.02em;transition:background .2s,transform .15s;margin-top:2rem}
+.subscribe-btn{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--white);padding:0.75rem 1.6rem;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:0.02em;transition:background .2s,transform .15s;margin-top:2rem;justify-content:center}
 .subscribe-btn:hover{background:var(--sky2);transform:translateY(-2px)}
 
 /* FILTERS */
 .filters-bar{background:var(--ice);border-bottom:1px solid var(--border-light);padding:0 2rem;position:sticky;top:72px;z-index:100}
-.filters-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:0;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.filters-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:0;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;justify-content:center}
 .filters-inner::-webkit-scrollbar{display:none}
 .filter-btn{font-size:12px;font-weight:500;color:var(--ink2);padding:0 1.2rem;height:48px;white-space:nowrap;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.02em;transition:color .2s,border-color .2s}
 .filter-btn:hover{color:var(--ink)}
@@ -92,7 +92,22 @@ footer{background:#080F18;border-top:1px solid var(--border);padding:2.5rem;text
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--navy2);border-top:1px solid var(--border);color:var(--steel2);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;z-index:9999;font-size:13px}
 
 @media(max-width:1100px){.nav-links{display:none}#hamburger{display:flex}#nav-cta-desktop{display:none}.issues-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.issues-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .issues-grid{grid-template-columns:1fr}
+  .hero{padding:120px 1.2rem 60px}
+  .hero-h1{font-size:32px}
+  .hero-sub{font-size:15px}
+  .hero-meta{gap:1rem}
+  .hero-stat-num{font-size:24px}
+  .subscribe-btn{width:100%;justify-content:center}
+  nav{padding:0 1.2rem}
+  footer{padding:2rem 1rem}
+  .footer-links{flex-direction:column;gap:0.8rem}
+}
+@media(max-width:480px){
+  .filters-bar{padding:0 1rem}
+  .filter-btn{padding:0 0.8rem;font-size:11px}
+}
 </style>
 </head>
 <body>
