@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement | AyattAI</title>
+<meta name="description" content="AyattAI's commitment to web accessibility. We strive to meet WCAG 2.1 AA standards so our website is usable by everyone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0D1E30;--sky:#3EB4E0;--white:#FFFFFF;--ice:#F5F8FA;--steel:#8CA3B4;--steel2:#B0C4D4;--ink:#1A2B3C;--ink2:#3D5166;--border:rgba(255,255,255,0.08);--border-light:rgba(0,0,0,0.08)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sky);outline-offset:3px;border-radius:2px}
+nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(13,30,48,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;z-index:1000}
+.nav-logo img{height:44px;width:auto;display:block}
+.nav-cta{background:var(--sky);color:var(--white);padding:0.5rem 1.3rem;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none}
+.hero{background:var(--navy);padding:120px 2rem 60px;text-align:center}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem}
+h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--white);letter-spacing:-0.02em;line-height:1.1}
+.content{max-width:760px;margin:0 auto;padding:5rem 2rem 6rem}
+h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink);margin:2.5rem 0 0.8rem;letter-spacing:-0.01em}
+p{font-size:16px;color:var(--ink2);line-height:1.75;font-weight:300;margin-bottom:1rem}
+ul{margin:0.5rem 0 1rem 1.2rem}
+li{font-size:16px;color:var(--ink2);line-height:1.75;font-weight:300;margin-bottom:0.4rem}
+.contact-box{background:var(--ice);border:1px solid var(--border-light);border-radius:4px;padding:2rem;margin-top:3rem}
+.contact-box p{margin-bottom:0.4rem}
+.contact-box a{color:var(--sky);font-weight:600;text-decoration:none}
+.divider{width:36px;height:2px;background:var(--sky);border-radius:2px;margin:1.5rem 0}
+footer{background:#080F18;border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:12px;color:var(--steel)}
+footer a{color:var(--sky);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;top:-40px;left:0;background:var(--sky);color:var(--white);padding:8px 16px;font-size:14px;font-weight:600;text-decoration:none;z-index:9999;border-radius:0 0 4px 0;transition:top .2s" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html" aria-label="AyattAI home">
+    <img src="https://ayatt.ai/og.png" alt="AyattAI" style="height:44px;width:auto">
+  </a>
+  <a href="index.html#contact" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="hero" id="main-content">
+  <p class="eyebrow">Legal</p>
+  <h1>Accessibility Statement</h1>
+</div>
+
+<main class="content" role="main">
+
+  <p>AyattAI Inc. is committed to ensuring that <strong>ayatt.ai</strong> is accessible to all users, including those with disabilities. We believe the web should be open and usable by everyone.</p>
+
+  <div class="divider"></div>
+
+  <h2>Our Standard</h2>
+  <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> — the internationally recognised standard for web accessibility, and the standard required under the Americans with Disabilities Act (ADA), the UK Equality Act, and the EU European Accessibility Act.</p>
+
+  <h2>What We Have Done</h2>
+  <p>To meet WCAG 2.1 AA, we have implemented the following across all pages of ayatt.ai:</p>
+  <ul>
+    <li>All images include descriptive alternative text for screen readers</li>
+    <li>All pages declare the document language (<code>lang="en"</code>)</li>
+    <li>A skip-to-main-content link is present on every page for keyboard users</li>
+    <li>Visible focus indicators are provided for all interactive elements</li>
+    <li>All form fields include accessible labels</li>
+    <li>Navigation landmarks are marked up with ARIA roles</li>
+    <li>Color contrast ratios meet or exceed WCAG 2.1 AA requirements</li>
+    <li>The site is fully keyboard navigable without requiring a mouse</li>
+    <li>All pages are responsive and functional on mobile devices</li>
+    <li>Heading structure is logical and hierarchical on every page</li>
+  </ul>
+
+  <h2>Known Limitations</h2>
+  <p>We are continuously improving. The animated neural-pulse canvas in the hero sections is a decorative visual element and does not convey information — it has no impact on screen reader users. We are monitoring all pages for ongoing compliance.</p>
+
+  <h2>Third-Party Content</h2>
+  <p>Some pages embed third-party content including a Vimeo video player. While we request accessible versions where available, we cannot fully control the accessibility of third-party platforms. The Vimeo player includes its own accessibility controls.</p>
+
+  <h2>Feedback and Contact</h2>
+  <div class="contact-box">
+    <p>If you experience any difficulty accessing any part of ayatt.ai, or if you believe any content is not fully accessible, please contact us. We take all feedback seriously and will respond within 5 business days.</p>
+    <p style="margin-top:1rem"><strong>Email:</strong> <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a></p>
+    <p><strong>Subject line:</strong> Accessibility Feedback — ayatt.ai</p>
+    <p><strong>Company:</strong> AyattAI Inc., Wesley Chapel, Florida, USA</p>
+  </div>
+
+  <h2>Date</h2>
+  <p>This accessibility statement was last reviewed and updated on <strong>June 22, 2026</strong>.</p>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 AyattAI, Inc. &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a></p>
+</footer>
+
+</body>
+</html>
