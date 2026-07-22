@@ -109,6 +109,79 @@ nav {
 }
 .nav-cta:hover { background: var(--sky2); transform: translateY(-1px); }
 
+/* ─── ANNOUNCEMENT STRIP ─── */
+.announce-strip {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0; right: 0;
+  z-index: 999;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(201,131,42,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+body.has-announce .announce-strip { display: flex; }
+.announce-strip-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 13px 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.announce-strip-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.announce-strip-flourish {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.announce-strip-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+.announce-strip-cta {
+  font-family: 'Inter', sans-serif;
+  color: var(--sky);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.announce-strip-link:hover .announce-strip-cta { color: var(--sky2); }
+.announce-strip-close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--steel);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+}
+.announce-strip-close:hover { color: var(--white); }
+
+@media (max-width: 640px) {
+  .announce-strip-inner { padding: 12px 2.75rem 12px 1rem; gap: 8px; }
+  .announce-strip-text { font-size: 13px; }
+  .announce-strip-cta { font-size: 12px; }
+}
+
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
@@ -120,6 +193,10 @@ nav {
   position: relative;
   overflow: hidden;
   padding: 120px 2rem 80px;
+  transition: padding-top .2s ease;
+}
+body.has-announce .hero {
+  padding-top: 172px;
 }
 
 /* Neural pulse canvas */
@@ -1212,9 +1289,30 @@ button:focus-visible, a:focus-visible {
 }
 </script>
 </head>
-<body>
+<body class="has-announce">
+<script>
+// Run before paint: hide the announcement strip immediately if already dismissed,
+// so returning visitors never see a flash of the strip or wrong hero spacing.
+try {
+  if (localStorage.getItem('ayattai_announcement_dismissed_v1')) {
+    document.body.classList.remove('has-announce');
+  }
+} catch (e) {}
+</script>
 <!-- Accessibility: Skip to main content -->
 <a href="#main-content" style="position:absolute;top:-40px;left:0;background:var(--sky);color:var(--white);padding:8px 16px;font-size:14px;font-weight:600;text-decoration:none;z-index:9999;border-radius:0 0 4px 0;transition:top .2s" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+
+<!-- ─── ANNOUNCEMENT STRIP ─── -->
+<div class="announce-strip" role="region" aria-label="Announcement">
+  <div class="announce-strip-inner">
+    <a class="announce-strip-link" href="press-release-first-production-rollout.html">
+      <span class="announce-strip-flourish" aria-hidden="true">&#9670;</span>
+      <span class="announce-strip-text">Automotive&rsquo;s first digital employee reports for duty.</span>
+      <span class="announce-strip-cta">Read the announcement &rarr;</span>
+    </a>
+    <button class="announce-strip-close" onclick="dismissAnnouncement()" aria-label="Dismiss announcement">&#10005;</button>
+  </div>
+</div>
 
 <!-- ─── NAV ─── -->
 <nav role="navigation" aria-label="Main navigation">
@@ -1229,6 +1327,7 @@ button:focus-visible, a:focus-visible {
     <a href="index.html#agents">AI Agents</a>
     <a href="index.html#services">Services</a>
     <a href="ravipov.html">RaviPOV</a>
+    <a href="press-release-first-production-rollout.html">Press</a>
     <a href="index.html#contact">Contact</a>
   </div>
   <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="nav-cta" id="nav-cta-desktop">Book a Call</a>
@@ -1881,6 +1980,7 @@ button:focus-visible, a:focus-visible {
     <a href="index.html#agents" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Agents</a>
     <a href="index.html#services" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Services</a>
     <a href="ravipov.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">RaviPOV</a>
+    <a href="press-release-first-production-rollout.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Press</a>
     <a href="index.html#contact" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Contact</a>
     <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" style="margin-top:2rem;background:var(--sky);color:var(--white);padding:14px 36px;border-radius:4px;font-size:16px;font-weight:600;text-decoration:none">Book a Call</a>
   </nav>
@@ -2017,6 +2117,12 @@ function toggleFaq(el){
   const wasOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
   if(!wasOpen) item.classList.add('open');
+}
+
+// ── Announcement strip ──
+function dismissAnnouncement(){
+  document.body.classList.remove('has-announce');
+  try{ localStorage.setItem('ayattai_announcement_dismissed_v1','1'); }catch(e){}
 }
 
 // ── Cookie ──
