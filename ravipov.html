@@ -156,6 +156,12 @@ button:focus-visible, a:focus-visible {
 .nav-drop-panel .ndt{display:block;font-size:13px;font-weight:600;color:var(--white)}
 .nav-drop-panel .ndd{display:block;font-size:11px;color:var(--steel);margin-top:2px;line-height:1.45}
 
+.nav-links a[aria-current="page"]{color:var(--sky);border-bottom-color:var(--sky)}
+/* ─── anchor offset: clear the fixed nav (72px) and the announcement strip (~48px) ─── */
+html { scroll-padding-top: 92px; }
+html:has(body.has-announce) { scroll-padding-top: 140px; }
+html:has(body.has-announce) .arc-rail { top: 148px; }
+
 </style>
 
 <!-- GEO: Structured Data for AI Crawlers -->
@@ -234,7 +240,7 @@ button:focus-visible, a:focus-visible {
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-insights">Insights<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="nav-drop-panel" id="nav-insights">
-        <a href="ravipov.html"><span class="ndt">RaviPOV</span><span class="ndd">Leadership in an AI-shaped organization</span></a>
+        <a href="ravipov.html" aria-current="page"><span class="ndt">RaviPOV</span><span class="ndd">Leadership in an AI-shaped organization</span></a>
         <a href="press-release-first-production-rollout.html"><span class="ndt">Press</span><span class="ndd">Announcements and coverage</span></a>
         <a href="index.html#founder"><span class="ndt">Founder</span><span class="ndd">30 years in IT. One big bet.</span></a>
       </div>

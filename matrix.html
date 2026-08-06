@@ -245,6 +245,12 @@ button:focus-visible, a:focus-visible {
 .nav-drop-panel .ndt{display:block;font-size:13px;font-weight:600;color:var(--white)}
 .nav-drop-panel .ndd{display:block;font-size:11px;color:var(--steel);margin-top:2px;line-height:1.45}
 
+.nav-links a[aria-current="page"]{color:var(--sky);border-bottom-color:var(--sky)}
+/* ─── anchor offset: clear the fixed nav (72px) and the announcement strip (~48px) ─── */
+html { scroll-padding-top: 92px; }
+html:has(body.has-announce) { scroll-padding-top: 140px; }
+html:has(body.has-announce) .arc-rail { top: 148px; }
+
 </style>
 
 <!-- GEO: Structured Data for AI Crawlers -->
@@ -330,7 +336,7 @@ button:focus-visible, a:focus-visible {
         <a href="index.html#architecture"><span class="ndt">Architecture</span><span class="ndd">The capability stack, layer by layer</span></a>
       </div>
     </div>
-    <a href="matrix.html" class="nav-featured">Matrix</a>
+    <a href="matrix.html" class="nav-featured" aria-current="page">Matrix</a>
     <a href="index.html#agents">AI Agents</a>
     <a href="index.html#services">Services</a>
     <div class="nav-drop">
@@ -349,11 +355,12 @@ button:focus-visible, a:focus-visible {
 <section id="main-content" aria-label="Main content" class="hero">
   <canvas id="neural-canvas"></canvas>
   <div class="hero-inner">
-    <div class="hero-badge">Digital Chief of Staff · Always On</div>
+    <img src="assets/matrix-logo.webp" alt="Matrix" width="560" height="196" style="display:block;margin:0 auto 1.7rem;height:82px;width:auto">
+      <div class="hero-badge">Digital Chief of Staff · Always On</div>
     <h1 class="hero-h1">The sleeping<br>organization<br><em>wakes up.</em></h1>
     <p class="hero-sub">Matrix is the flagship application on AyattAI Helm — the intelligence layer that observes your entire enterprise, surfaces what matters, and coordinates the agent roster before problems become crises. Built for CEOs and CXOs at every scale.</p>
     <div class="hero-btns">
-      <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="btn-primary">Book a 30 Min Call →</a>
+      <a href="index.html#contact" class="btn-primary">Talk to us →</a>
       <a href="#philosophy" class="btn-ghost">See the philosophy</a>
     </div>
   </div>
@@ -512,7 +519,7 @@ button:focus-visible, a:focus-visible {
           <h3 class="tier-headline">Built for boards.<br>Designed for<br>complexity.</h3>
           <p class="tier-tagline">SAP, Oracle, ServiceNow, Salesforce — all running in parallel, none talking at the intelligence layer. Matrix connects them all and gives your board the signal they need.</p>
           <div class="tier-btns">
-            <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" style="background:var(--gold);color:var(--white);padding:0.8rem 1.8rem;border-radius:4px;font-size:13px;font-weight:700;text-decoration:none">Schedule Briefing →</a>
+            <a href="index.html#contact" style="background:var(--gold);color:var(--white);padding:0.8rem 1.8rem;border-radius:4px;font-size:13px;font-weight:700;text-decoration:none">Schedule Briefing →</a>
             <a href="index.html#contact" class="btn-ghost">Contact AyattAI</a>
           </div>
         </div>
@@ -581,10 +588,10 @@ button:focus-visible, a:focus-visible {
 
 <div class="cta-strip">
   <h2>Ready to see the whole picture?</h2>
-  <p>Book a 30-minute call with Ravi. Walk away with a clear view of what Matrix would see in your organization.</p>
+  <p>Tell us about your organization. You&rsquo;ll walk away with a clear view of what Matrix would see in it.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="btn-white">Book a 30 Min Call →</a>
-    <a href="index.html#contact" class="btn-white-ghost">Request a Demo</a>
+    <a href="index.html#contact" class="btn-white">Talk to us →</a>
+    <a href="index.html#contact" class="btn-white-ghost">Request a demo</a>
   </div>
 </div>
 

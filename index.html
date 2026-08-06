@@ -93,8 +93,12 @@ nav {
   border-bottom-color: var(--sky);
 }
 .nav-links a.nav-featured {
-  color: var(--sky);
   font-weight: 600;
+}
+/* sky is reserved for the current page, so the nav reads as location not decoration */
+.nav-links a[aria-current="page"] {
+  color: var(--sky);
+  border-bottom-color: var(--sky);
 }
 .nav-cta {
   background: var(--sky);
@@ -1203,6 +1207,24 @@ footer {
     padding:.7rem 0 0;margin-top:.7rem }
 }
 
+/* ─── anchor offset: clear the fixed nav (72px) and the announcement strip (~48px) ─── */
+html { scroll-padding-top: 92px; }
+html:has(body.has-announce) { scroll-padding-top: 140px; }
+html:has(body.has-announce) .arc-rail { top: 148px; }
+
+/* ─── contact form ─── */
+.f-label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--steel);margin:.2rem 0 .45rem}
+.f-select{appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%238CA3B4' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .9rem center;background-size:12px;padding-right:2.4rem}
+#contact-form button.f-btn-primary{border:none;cursor:pointer;font-family:inherit}
+#contact-form .f-input:user-invalid,#contact-form .f-textarea:user-invalid{border-color:#E0674A}
+.f-status{font-size:13px;line-height:1.6;margin-top:.9rem;min-height:1.2em;color:var(--steel2)}
+.f-status[data-state=error]{color:#F0A08A}
+.f-status[data-state=ok]{color:var(--sky)}
+#contact-form[data-sent="1"]{opacity:.55;pointer-events:none}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1200px) {
   .nav-links { display: none; }
@@ -1279,13 +1301,14 @@ button:focus-visible, a:focus-visible {
   font-size:13px;line-height:1.7;color:var(--ink2);font-weight:300;text-align:left}
 .arch-reuse strong{color:var(--gold);font-weight:600}
 .arch-foundations{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.arch-app{border:1px dashed var(--border-light);border-radius:4px;padding:1.5rem 2rem;
-  background:var(--white)}
+.arch-app{border:1px solid rgba(62,180,224,.28);border-radius:4px;padding:2.3rem 2rem;
+  background:var(--navy)}
+.arch-app-logo{display:block;margin:0 auto 1.2rem;height:60px;width:auto}
 .arch-app-chip{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold)}
 .arch-app-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
-  color:var(--ink);margin:.4rem 0 .5rem;letter-spacing:-.5px}
-.arch-app-desc{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300;max-width:82ch}
+  color:var(--white);margin:.4rem 0 .5rem;letter-spacing:-.5px}
+.arch-app-desc{font-size:13px;color:var(--steel2);line-height:1.7;font-weight:300;max-width:82ch}
 .arch-app-desc a{color:var(--sky);font-weight:600;text-decoration:none}
 
 /* ─── product cards without stock photography ─── */
@@ -1560,6 +1583,7 @@ try {
 </nav>
 
 <!-- ─── HERO ─── -->
+<div id="main-content" tabindex="-1"></div>
 <section class="hero" id="hero">
   <canvas id="neural-canvas"></canvas>
   <div class="hero-inner">
@@ -1779,7 +1803,7 @@ try {
 
       <div class="arch-app">
         <span class="arch-app-chip">Application</span>
-        <div class="arch-app-name">Matrix &mdash; the Digital Chief of Staff</div>
+        <img class="arch-app-logo" src="assets/matrix-logo.webp" alt="Matrix &mdash; the Digital Chief of Staff" width="560" height="196" loading="lazy" decoding="async">
         <p class="arch-app-desc">Not a platform. Matrix is the flagship application built on Helm: it observes the whole enterprise, surfaces what needs a decision, and coordinates the agents on the CEO's behalf. <a href="matrix.html">Explore Matrix &rarr;</a></p>
       </div>
 
@@ -2306,20 +2330,30 @@ try {
       <div class="contact-form-side">
         <p class="eyebrow eyebrow--sky">Contact Us</p>
         <h2 class="section-title section-title--white" style="margin-bottom:1.5rem;font-size:clamp(24px,2.5vw,36px)">Start your agentic<br>AI journey.</h2>
-        <div class="f-row">
-          <input type="text" class="f-input" placeholder="Your Name" aria-label="Your Name">
-          <input type="email" class="f-input" placeholder="Work Email" aria-label="Work Email">
-        </div>
-        <div class="f-row">
-          <input type="text" class="f-input" placeholder="Company" aria-label="Company">
-          <input type="text" class="f-input" placeholder="Role" aria-label="Your Role">
-        </div>
-        <textarea class="f-textarea" placeholder="How can we help you?" aria-label="Message"></textarea>
-        <div class="f-btns">
-          <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="f-btn-primary">Request Demo →</a>
-          <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="f-btn-ghost">Executive Briefing</a>
-          <a href="https://cal.com/ravi-teja-bommireddipalli-6kunix" target="_blank" class="f-btn-ghost">Design Partner</a>
-        </div>
+        <form id="contact-form" novalidate>
+          <div class="f-row">
+            <input type="text" name="name" class="f-input" placeholder="Your Name" aria-label="Your Name" required autocomplete="name">
+            <input type="email" name="email" class="f-input" placeholder="Work Email" aria-label="Work Email" required autocomplete="email">
+          </div>
+          <div class="f-row">
+            <input type="text" name="company" class="f-input" placeholder="Company" aria-label="Company" autocomplete="organization">
+            <input type="text" name="role" class="f-input" placeholder="Role" aria-label="Your Role" autocomplete="organization-title">
+          </div>
+          <label class="f-label" for="cf-interest">What brings you here?</label>
+          <select id="cf-interest" name="interest" class="f-input f-select">
+            <option>Request a demo</option>
+            <option>Executive briefing</option>
+            <option>Become a design partner</option>
+            <option>Request the architecture brief</option>
+            <option>Something else</option>
+          </select>
+          <textarea name="message" class="f-textarea" placeholder="How can we help you?" aria-label="Message"></textarea>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+          <div class="f-btns">
+            <button type="submit" class="f-btn-primary" id="cf-submit">Send &rarr;</button>
+          </div>
+          <p class="f-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </div>
@@ -2534,6 +2568,56 @@ try{ if(localStorage.getItem('ayattai_cookies')) document.getElementById('cookie
   });
   document.addEventListener('click', function(){ closeAll(null); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeAll(null); });
+})();
+
+// ─── contact form ────────────────────────────────────────────────
+// Paste your form handler URL into CONTACT_ENDPOINT to go live.
+// Until then the form opens a pre-filled email, so nothing is lost.
+var CONTACT_ENDPOINT = '';
+var CONTACT_EMAIL = 'raviteja@ayatt.ai';
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('cf-status');
+  var btn = document.getElementById('cf-submit');
+  function say(m, st) {
+    status.textContent = m;
+    if (st) status.setAttribute('data-state', st); else status.removeAttribute('data-state');
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      say('Please add your name and a valid work email.', 'error');
+      var bad = form.querySelector(':invalid'); if (bad) bad.focus();
+      return;
+    }
+    var data = Object.fromEntries(new FormData(form).entries());
+    if (data._gotcha) return;
+    delete data._gotcha;
+    if (!CONTACT_ENDPOINT) {
+      var body = Object.keys(data).map(function (k) {
+        return k.charAt(0).toUpperCase() + k.slice(1) + ': ' + data[k];
+      }).join('\n');
+      window.location.href = 'mailto:' + CONTACT_EMAIL
+        + '?subject=' + encodeURIComponent('AyattAI enquiry \u2014 ' + (data.interest || 'Website'))
+        + '&body=' + encodeURIComponent(body);
+      say('Opening your email client\u2026', 'ok');
+      return;
+    }
+    btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending\u2026'; say('');
+    fetch(CONTACT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.setAttribute('data-sent', '1');
+      say('Thank you \u2014 we\u2019ll be in touch shortly.', 'ok');
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = label;
+      say('Something went wrong. Please email ' + CONTACT_EMAIL + ' directly.', 'error');
+    });
+  });
 })();
 </script>
 </body>
