@@ -1112,10 +1112,6 @@ footer {
 
 /* ─── ARCHITECTURE (capability view) ─── */
 .arc-bg { background: var(--white); }
-.arc-note { font-size:13px;color:var(--ink2);font-weight:300;line-height:1.7;
-  max-width:74ch;margin:2.6rem auto 0;text-align:center;padding-top:1.6rem;
-  border-top:1px solid var(--border-light) }
-.arc-note em { color:var(--ink);font-style:normal;font-weight:500 }
 
 
 /* left gutter: the round trip */
@@ -1141,20 +1137,12 @@ footer {
   color:var(--gold);margin-bottom:.5rem }
 .arc-panel-name { font-family:'Playfair Display',serif;font-size:20px;font-weight:700;
   color:var(--ink);letter-spacing:-.4px;margin-bottom:1rem }
-.arc-dep { display:flex;flex-direction:column;gap:.55rem;list-style:none }
+.arc-dep { display:flex;flex-direction:column;gap:.7rem;list-style:none }
 .arc-dep li { font-size:13px;color:var(--ink2);font-weight:300;line-height:1.55;
   padding-left:.9rem;position:relative }
 .arc-dep li::before { content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;
   border-radius:50%;background:var(--sky) }
 .arc-dep strong { color:var(--ink);font-weight:600 }
-.arc-pipe { display:flex;flex-direction:column;gap:0;list-style:none;counter-reset:pipe }
-.arc-pipe li { font-size:13px;color:var(--ink2);font-weight:300;line-height:1.5;
-  padding:.55rem 0 .55rem 2.3rem;position:relative;counter-increment:pipe;
-  border-bottom:1px solid var(--border-light) }
-.arc-pipe li:last-child { border-bottom:none }
-.arc-pipe li::before { content:counter(pipe,decimal-leading-zero);position:absolute;left:0;
-  top:.55rem;font-size:11px;font-weight:600;color:var(--sky);letter-spacing:.05em }
-.arc-pipe strong { color:var(--ink);font-weight:600 }
 
 @media (max-width: 1000px) {
   .arc-claims { grid-template-columns:1fr }
@@ -1167,10 +1155,6 @@ footer {
 html { scroll-padding-top: 92px; }
 html:has(body.has-announce) { scroll-padding-top: 140px; }
 
-/* the stake this section answers — emotion at the door, rigour inside */
-.arcd-stake{max-width:640px;margin:2.4rem auto 0;text-align:center;
-  font-family:'Playfair Display',serif;font-size:21px;line-height:1.5;color:var(--ink);font-weight:700}
-.arcd-stake em{font-style:italic;color:var(--gold)}
 
 .arcd-wrap{margin:2.6rem auto 0;max-width:1000px}
 .arcd-svg{display:block;width:100%;height:auto;overflow:visible}
@@ -1197,7 +1181,6 @@ html:has(body.has-announce) { scroll-padding-top: 140px; }
 .arcd-swatch{width:22px;height:2px;border-radius:2px;display:inline-block}
 
 @media(max-width:720px){
-  .arcd-stake{font-size:18px}
   .arcd-legend{gap:1.1rem;font-size:12px}
 }
 
@@ -1209,7 +1192,7 @@ html:has(body.has-announce) { scroll-padding-top: 140px; }
 .arc-panel{text-align:center}
 .arc-panel-eyebrow,.arc-panel-name{text-align:center}
 /* the block centres; the text inside does not, so bullets and numbers still scan */
-.arc-dep,.arc-pipe{display:inline-block;text-align:left;margin:0 auto}
+.arc-dep{display:inline-block;text-align:left;margin:0 auto}
 .arc-panel .arc-sub{text-align:center;max-width:46ch;margin-left:auto;margin-right:auto}
 
 /* ─── contact form ─── */
@@ -1819,8 +1802,6 @@ try {
     <p class="section-desc section-desc--ink centered">One request, traced end to end. Down through the agent that owns the decision, into the system that owns the record, and back &mdash; with a name against every write.</p>
     <div class="divider divider--center"></div>
 
-    <p class="arcd-stake">No CIO lies awake worrying that AI will answer badly.<br>They worry it will <em>act</em> badly &mdash; at 2am, in the ERP, with no one's name on it.</p>
-
         <div class="arcd-wrap">
           <svg class="arcd-svg arcd-desktop" viewBox="0 0 1000 700" role="img"
                aria-label="Architecture diagram: a request descends from the Experience layer through Helm and its eight role agents, reads from the Data Prism and Strata foundation, writes through the Integration boundary to systems of record, and returns. Security, governance and deployment enclose the whole system.">
@@ -2072,12 +2053,11 @@ try {
           <li><strong>Hybrid</strong> &mdash; reasoning in cloud, sensitive data held on your side</li>
           <li><strong>Private on-premises</strong> &mdash; entirely inside your perimeter</li>
         </ul>
-        <p class="arc-sub" style="margin-top:1.1rem">Topology is a risk decision, not a feature decision. The capability layers above are identical in all five.</p>
       </div>
       <div class="arc-panel">
         <p class="arc-panel-eyebrow">Security</p>
         <div class="arc-panel-name">What happens to a request.</div>
-        <ul class="arc-pipe">
+        <ul class="arc-dep">
           <li><strong>Data classification</strong> &mdash; sensitivity determined before anything moves</li>
           <li><strong>Authorisation</strong> &mdash; checked against the role, not the requester's intent</li>
           <li><strong>PII masking</strong> &mdash; identifiers removed before the model sees the payload</li>
@@ -2086,8 +2066,6 @@ try {
         </ul>
       </div>
     </div>
-
-    <p class="arc-note">This is the capability view: what each layer does, and where the three platforms sit. It stops deliberately short of orchestration internals and model vendors &mdash; <em>those are engagement material, not marketing material.</em></p>
 
     <!-- ITEM 5 (undecided): gated "Request the architecture brief" CTA belongs here.
          The detailed internals view — gateway, planner, domain controllers, agent runtime,
