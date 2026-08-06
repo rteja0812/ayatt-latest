@@ -331,29 +331,30 @@ html:has(body.has-announce) .arc-rail { top: 148px; }
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-platform">Platform<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="nav-drop-panel" id="nav-platform">
-        <a href="index.html#platforms"><span class="ndt">Helm</span><span class="ndd">The agent platform &mdash; agents by role, orchestrated by Flow</span></a>
-        <a href="index.html#dataprism"><span class="ndt">Data Prism</span><span class="ndd">Data lake and semantic foundation</span></a>
-        <a href="index.html#strata"><span class="ndt">Strata</span><span class="ndd">Machine learning and prediction</span></a>
-        <a href="index.html#nervous-system"><span class="ndt">The Seven Layers</span><span class="ndd">The model behind agentic AI</span></a>
-        <a href="index.html#architecture"><span class="ndt">Architecture</span><span class="ndd">The capability stack, layer by layer</span></a>
-      </div>
+            <a href="index.html#nervous-system"><span class="ndt">The Seven Layers</span><span class="ndd">The model behind agentic AI</span></a>
+            <a href="index.html#platforms"><span class="ndt">Helm</span><span class="ndd">The agent platform &mdash; agents by role, orchestrated by Flow</span></a>
+            <a href="index.html#dataprism"><span class="ndt">Data Prism</span><span class="ndd">Data lake and semantic foundation</span></a>
+            <a href="index.html#strata"><span class="ndt">Strata</span><span class="ndd">Machine learning and prediction</span></a>
+            <a href="index.html#architecture"><span class="ndt">Architecture</span><span class="ndd">The capability stack, layer by layer</span></a>
+          </div>
     </div>
     <a href="matrix.html" class="nav-featured" aria-current="page">Matrix</a>
     <a href="index.html#agents">AI Agents</a>
     <div class="nav-drop">
           <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
           <div class="nav-drop-panel" role="menu">
-            <a href="index.html#methodology"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
+            <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
             <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, build and enablement</span></a>
           </div>
         </div>
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-insights">Insights<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="nav-drop-panel" id="nav-insights">
-        <a href="ravipov.html"><span class="ndt">RaviPOV</span><span class="ndd">Leadership in an AI-shaped organization</span></a>
-        <a href="press-release-first-production-rollout.html"><span class="ndt">Press</span><span class="ndd">Announcements and coverage</span></a>
-        <a href="index.html#founder"><span class="ndt">Founder</span><span class="ndd">30 years in IT. One big bet.</span></a>
-      </div>
+            <a href="index.html#case-study"><span class="ndt">Case Study</span><span class="ndd">Automotive&rsquo;s first digital employee</span></a>
+            <a href="press-release-first-production-rollout.html"><span class="ndt">Press</span><span class="ndd">Announcements and coverage</span></a>
+            <a href="ravipov.html"><span class="ndt">RaviPOV</span><span class="ndd">Leadership in an AI-shaped organization</span></a>
+            <a href="index.html#founder"><span class="ndt">Founder</span><span class="ndd">30 years in IT. One big bet.</span></a>
+          </div>
     </div>
     <a href="index.html#contact">Contact</a>
   </div>
@@ -618,13 +619,17 @@ html:has(body.has-announce) .arc-rail { top: 148px; }
 <div id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
   <button onclick="toggleMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;cursor:pointer;font-size:28px;color:var(--steel2);line-height:1">✕</button>
   <nav style="display:flex;flex-direction:column;align-items:center;gap:0;width:100%;padding-top:60px">
-    <a href="matrix.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Matrix</a>
-    <a href="index.html#founder" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Founder</a>
-    <a href="index.html#nervous-system" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">How It Works</a>
+    <a href="matrix.html" onclick="toggleMenu()" aria-current="page" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Matrix</a>
+    <a href="index.html#nervous-system" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Seven Layers</a>
     <a href="index.html#platforms" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Platforms</a>
+    <a href="index.html#architecture" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Architecture</a>
     <a href="index.html#agents" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Agents</a>
     <a href="index.html#services" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Services</a>
+    <a href="index.html#ai-strategy" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Strategy</a>
+    <a href="index.html#case-study" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Case Study</a>
+    <a href="press-release-first-production-rollout.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Press</a>
     <a href="ravipov.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">RaviPOV</a>
+    <a href="index.html#founder" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Founder</a>
     <a href="index.html#contact" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Contact</a>
   </nav>
 </div>
