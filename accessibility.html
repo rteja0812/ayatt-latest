@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accessibility Statement | AyattAI</title>
 <meta name="description" content="AyattAI's commitment to web accessibility. We strive to meet WCAG 2.1 AA standards so our website is usable by everyone.">
+  <link rel="canonical" href="https://ayatt.ai/accessibility.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -140,7 +141,13 @@ nav{position: fixed;
     </div>
     <a href="matrix.html" class="nav-featured">Matrix</a>
     <a href="index.html#agents">AI Agents</a>
-    <a href="index.html#services">Services</a>
+    <div class="nav-drop">
+          <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+          <div class="nav-drop-panel" role="menu">
+            <a href="index.html#methodology"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
+            <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, build and enablement</span></a>
+          </div>
+        </div>
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-insights">Insights<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="nav-drop-panel" id="nav-insights">
