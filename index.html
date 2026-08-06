@@ -1356,7 +1356,8 @@ html:has(body.has-announce) { scroll-padding-top: 140px; }
 .mth-svg-m{display:none}
 @media(max-width:820px){.mth-svg-d{display:none}.mth-svg-m{display:block}}
 .mth-legend{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.4rem;
-  font-size:12.5px;color:var(--ink2)}
+  font-size:12.5px;color:var(--ink2);text-align:center}
+@media(max-width:560px){.mth-legend{flex-direction:column;gap:.6rem;align-items:center}}
 .mth-legend b{color:var(--ink);font-weight:600}
 .mth-key{display:inline-flex;align-items:center;gap:.5rem}
 .mth-sw{width:12px;height:12px;border-radius:2px;display:inline-block}
@@ -1401,6 +1402,11 @@ html:has(body.has-announce) { scroll-padding-top: 140px; }
 .vid-fac:hover .vid-ring{transform:scale(1.07);background:rgba(62,180,224,.16)}
 .vid-t{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;letter-spacing:-.2px}
 .vid-s{font-size:12px;color:var(--steel2)}
+
+.spk-link{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;margin-top:1.1rem;
+  font-size:13.5px;font-weight:600;color:var(--gold);text-decoration:none;
+  border-bottom:1px solid transparent;transition:border-color .25s}
+.spk-link:hover{border-bottom-color:var(--gold)}
 
 /* ─── contact form ─── */
 .f-label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
@@ -2023,40 +2029,43 @@ try {
           <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.8" stroke-linecap="round"/>
         </marker>
       </defs>
-      <g font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0"><text x="20" y="16">PHASE 01</text></g>
-      <rect x="20" y="24" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-      <text x="34" y="48" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#1A2B3C">Value Stream</text>
-      <text x="34" y="70" font-size="12" fill="#3D5166">Every workflow, as it really runs &mdash;</text>
-      <text x="34" y="88" font-size="12" fill="#3D5166">not as the process document claims.</text>
-      <path d="M190 114 L190 130" stroke="#8CA3B4" stroke-width="1.6" marker-end="url(#mfm)"/>
 
-      <g font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0"><text x="40" y="152">PHASE 02</text></g>
-      <rect x="40" y="160" width="300" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-      <text x="54" y="184" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#1A2B3C">Scoring</text>
-      <text x="54" y="206" font-size="12" fill="#3D5166">Four questions per step.</text>
-      <text x="54" y="224" font-size="12" fill="#3D5166">3 or 4 &ldquo;yes&rdquo; = strong candidate.</text>
-      <path d="M190 250 L190 266" stroke="#8CA3B4" stroke-width="1.6" marker-end="url(#mfm)"/>
+      <g text-anchor="middle">
+        <text x="190" y="16" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 01</text>
+        <rect x="20" y="24" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="52" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Value Stream</text>
+        <text x="190" y="76" font-size="12" fill="#3D5166">Every workflow, as it really runs &mdash;</text>
+        <text x="190" y="94" font-size="12" fill="#3D5166">not as the process document claims.</text>
+        <path d="M190 116 L190 132" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
 
-      <g font-size="10" font-weight="700" letter-spacing="1.1" fill="#C9832A"><text x="60" y="288">PHASE 03</text></g>
-      <rect x="60" y="296" width="260" height="86" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
-      <text x="74" y="320" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#8A5A18">Agents</text>
-      <text x="74" y="342" font-size="12" fill="#3D5166">Steps cluster into named agents</text>
-      <text x="74" y="360" font-size="12" fill="#3D5166">on all three signals at once.</text>
-      <path d="M190 386 L190 402" stroke="#8CA3B4" stroke-width="1.6" marker-end="url(#mfm)"/>
+        <text x="190" y="152" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 02</text>
+        <rect x="20" y="160" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="188" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Scoring</text>
+        <text x="190" y="212" font-size="12" fill="#3D5166">Four questions per step.</text>
+        <text x="190" y="230" font-size="12" fill="#3D5166">Three or four &ldquo;yes&rdquo; = strong candidate.</text>
+        <path d="M190 252 L190 268" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
 
-      <g font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0"><text x="30" y="424">PHASE 04</text></g>
-      <rect x="30" y="432" width="320" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-      <text x="44" y="456" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#1A2B3C">Skills</text>
-      <text x="44" y="478" font-size="12" fill="#3D5166">Each agent breaks into skills:</text>
-      <text x="44" y="496" font-size="12" fill="#3D5166">retrieve, analyse, output, act.</text>
-      <path d="M190 522 L190 538" stroke="#8CA3B4" stroke-width="1.6" marker-end="url(#mfm)"/>
+        <text x="190" y="288" font-size="10" font-weight="700" letter-spacing="1.1" fill="#C9832A">PHASE 03</text>
+        <rect x="20" y="296" width="340" height="86" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
+        <text x="190" y="324" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#8A5A18">Agents</text>
+        <text x="190" y="348" font-size="12" fill="#3D5166">Steps cluster into named agents</text>
+        <text x="190" y="366" font-size="12" fill="#3D5166">on all three signals at once.</text>
+        <path d="M190 388 L190 404" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
 
-      <g font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0"><text x="20" y="560">PHASE 05</text></g>
-      <rect x="20" y="568" width="340" height="100" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
-      <text x="34" y="592" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#1A2B3C">Backlog</text>
-      <text x="34" y="614" font-size="12" fill="#3D5166">Ranked by impact &times; readiness.</text>
-      <text x="34" y="632" font-size="12" fill="#3EB4E0" font-weight="600">Shared skills built first &mdash;</text>
-      <text x="34" y="650" font-size="12" fill="#3EB4E0" font-weight="600">one skill serves several agents.</text>
+        <text x="190" y="424" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 04</text>
+        <rect x="20" y="432" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="460" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Skills</text>
+        <text x="190" y="484" font-size="12" fill="#3D5166">Each agent breaks into skills:</text>
+        <text x="190" y="502" font-size="12" fill="#3D5166">retrieve, analyse, output, act.</text>
+        <path d="M190 524 L190 540" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="560" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 05</text>
+        <rect x="20" y="568" width="340" height="104" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
+        <text x="190" y="596" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Backlog</text>
+        <text x="190" y="620" font-size="12" fill="#3D5166">Ranked by impact &times; readiness.</text>
+        <text x="190" y="640" font-size="12" fill="#3EB4E0" font-weight="600">Shared skills built first &mdash;</text>
+        <text x="190" y="658" font-size="12" fill="#3EB4E0" font-weight="600">one skill serves several agents.</text>
+      </g>
     </svg>
 
     <div class="mth-legend">
@@ -2857,6 +2866,7 @@ try {
         <p class="spk-q">The hardest part of enterprise AI was never the model. It was <em>the conversation with the people whose work changes.</em></p>
         <p class="spk-b">Ravi speaks to boards and executive teams on leadership in an AI-shaped organisation &mdash; what to delegate, what to keep, and how to tell the difference.</p>
         <p class="spk-meta">Recent: executive keynote on enterprise AI, Washington D.C. &middot; Forbes Technology Council &middot; CEO Council of Tampa Bay &middot; guest lecturer, IIT Bombay</p>
+        <a class="spk-link" href="https://www.bommireddipalli.com" target="_blank" rel="noopener noreferrer">Speaking enquiries &amp; full bio &rarr;</a>
       </div>
       <div class="spk-photo">
         <img src="assets/ravi-keynote.webp" alt="Ravi Teja Bommireddipalli delivering a keynote on enterprise AI" width="800" height="988" loading="lazy" decoding="async">
