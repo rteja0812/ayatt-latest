@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AyattAI | The Enterprise Nervous System for AI</title>
+<title>AyattAI | Enterprise Agentic AI, in Production in 12 Weeks</title>
 <!-- Open Graph / iMessage / WhatsApp / LinkedIn / Twitter -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ayatt.ai/">
-<meta property="og:title" content="AyattAI | The Enterprise Nervous System for AI">
-<meta property="og:description" content="AyattAI is the enterprise nervous system for AI. Helm runs the agents, Data Prism gives them meaning, Strata gives them foresight.">
+<meta property="og:title" content="AyattAI | Enterprise Agentic AI, in Production in 12 Weeks">
+<meta property="og:description" content="AyattAI puts enterprise AI agents into production in twelve weeks, one approved skill at a time. We map how your work actually runs before building anything.">
 <meta property="og:image" content="https://ayatt.ai/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="AyattAI">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AyattAI | The Enterprise Nervous System for AI">
-<meta name="twitter:description" content="AyattAI is the enterprise nervous system for AI. Helm runs the agents, Data Prism gives them meaning, Strata gives them foresight.">
+<meta name="twitter:title" content="AyattAI | Enterprise Agentic AI, in Production in 12 Weeks">
+<meta name="twitter:description" content="AyattAI puts enterprise AI agents into production in twelve weeks, one approved skill at a time. We map how your work actually runs before building anything.">
 <meta name="twitter:image" content="https://ayatt.ai/og.png">
-<meta name="description" content="AyattAI is the enterprise nervous system for AI. Helm runs the agents, Data Prism gives them meaning, Strata gives them foresight.">
+<meta name="description" content="AyattAI puts enterprise AI agents into production in twelve weeks, one approved skill at a time. We map how your work actually runs before building anything.">
   <link rel="canonical" href="https://ayatt.ai/">
 
 <!-- desc-replaced -->
@@ -345,7 +345,7 @@ body.has-announce .hero {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 .stat-cell {
   text-align: center;
@@ -1408,6 +1408,66 @@ html:has(body.has-announce) { scroll-padding-top: 140px; }
   border-bottom:1px solid transparent;transition:border-color .25s}
 .spk-link:hover{border-bottom-color:var(--gold)}
 
+/* ── compounding economics: the reuse arithmetic ── */
+.eco-sec{background:var(--navy);position:relative;overflow:hidden}
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
+  max-width:1120px;margin:3.2rem auto 0}
+.eco-h{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,42px);font-weight:700;
+  line-height:1.14;color:var(--white);letter-spacing:-.025em}
+.eco-h em{font-style:italic;color:var(--sky)}
+.eco-b{font-size:16px;line-height:1.8;font-weight:300;color:var(--steel2);margin-top:1.3rem}
+.eco-b strong{color:var(--white);font-weight:600}
+.eco-steps{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:0}
+.eco-steps li{position:relative;padding:1rem 0 1rem 3.1rem;border-bottom:1px solid var(--border);
+  font-size:14.5px;line-height:1.7;color:var(--steel2);font-weight:300;counter-increment:eco}
+.eco-steps li:last-child{border-bottom:none}
+.eco-steps li::before{content:counter(eco);position:absolute;left:0;top:.95rem;
+  width:26px;height:26px;border-radius:50%;border:1px solid var(--sky);color:var(--sky);
+  font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.eco-steps{counter-reset:eco}
+.eco-steps strong{color:var(--white);font-weight:600}
+.eco-svg{display:block;width:100%;height:auto;overflow:visible}
+.eco-note{font-size:12.5px;color:var(--steel);font-weight:300;line-height:1.7;
+  margin-top:1.2rem;text-align:center;font-style:italic}
+.eco-model{max-width:1120px;margin:3.4rem auto 0;padding-top:2.6rem;border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.eco-card{border-left:2px solid var(--gold);padding-left:1.2rem}
+.eco-card-t{font-size:15px;font-weight:700;color:var(--white)}
+.eco-card-d{font-size:13.5px;color:var(--steel2);font-weight:300;line-height:1.7;margin-top:.5rem}
+@media(max-width:900px){
+  .eco-grid{grid-template-columns:1fr;gap:2.6rem}
+  .eco-model{grid-template-columns:1fr;gap:1.4rem}
+}
+
+/* ── section rhythm: no two adjacent sections share a ground ──
+   Dark and light alternate; warm (cream) stays reserved for the
+   human sections so the temperature rule still holds.            */
+
+/* case study: was navy directly under a navy hero + stats band */
+.cs-sec{background:var(--ice)}
+.cs-head{color:var(--ink)}
+.cs-head em{color:var(--sky)}
+.cs-body{color:var(--ink2)}
+.cs-facts{border-top-color:var(--border-light)}
+.cs-l{color:var(--ink2)}
+.cs-quote{border-top-color:var(--border-light)}
+.cs-quote p{color:var(--ink)}
+.cs-quote span{color:var(--ink2)}
+.cs-tag{border-color:rgba(201,131,42,.4)}
+
+/* founder: was cream immediately after the cream ayatt section */
+#founder.warm-bg{background:var(--white)}
+
+/* services: was navy immediately after the navy agents section.
+   Cards stay dark on a light ground - deliberate, not an oversight. */
+.services-bg{background:var(--ice)}
+#services .section-title--white{color:var(--ink)}
+#services .section-desc--steel{color:var(--ink2)}
+
+/* ai-strategy: white so it doesn't repeat the ice of services */
+.mth-sec{background:var(--white)}
+.mth-flow,.mth-qc,.mth-card,.mth-quad .mth-qd-cell{background:var(--ice)}
+
 /* ─── contact form ─── */
 .f-label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
   color:var(--steel);margin:.2rem 0 .45rem}
@@ -1497,15 +1557,6 @@ button:focus-visible, a:focus-visible {
   font-size:13px;line-height:1.7;color:var(--ink2);font-weight:300;text-align:left}
 .arch-reuse strong{color:var(--gold);font-weight:600}
 .arch-foundations{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.arch-app{border:1px solid rgba(62,180,224,.28);border-radius:4px;padding:2.3rem 2rem;
-  background:var(--navy)}
-.arch-app-logo{display:block;margin:0 auto 1.2rem;height:60px;width:auto}
-.arch-app-chip{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gold)}
-.arch-app-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
-  color:var(--white);margin:.4rem 0 .5rem;letter-spacing:-.5px}
-.arch-app-desc{font-size:13px;color:var(--steel2);line-height:1.7;font-weight:300;max-width:82ch}
-.arch-app-desc a{color:var(--sky);font-weight:600;text-decoration:none}
 
 /* ─── product cards without stock photography ─── */
 .prod-plate{background:var(--navy);padding:1.5rem 1.8rem 1.3rem;position:relative}
@@ -1537,8 +1588,6 @@ button:focus-visible, a:focus-visible {
 .arch-list{align-items:center!important}
 .arch-list li{text-align:left}
 .arch-reuse{text-align:center;max-width:96ch;margin-left:auto;margin-right:auto}
-.arch-app{text-align:center}
-.arch-app-desc{margin-left:auto;margin-right:auto}
 
 /* services cards */
 .svc-card{text-align:center}
@@ -1581,7 +1630,7 @@ button:focus-visible, a:focus-visible {
       "@id": "https://ayatt.ai/#organization",
       "name": "AyattAI",
       "alternateName": ["AyattAI Inc", "Ayatt AI", "āyattAI"],
-      "description": "AyattAI is the enterprise nervous system for AI. It runs on three platforms: Helm, the enterprise agent platform, where agents are organised by role and Flow orchestrates them into end-to-end value streams; Data Prism, the data lake and semantic foundation; and Strata, the machine learning and prediction layer. Matrix is AyattAI's Digital Chief of Staff: an AI agent that observes the entire enterprise, surfaces risks and priorities, and coordinates cross-functional action continuously.",
+      "description": "AyattAI puts enterprise AI agents into production in twelve weeks, one approved skill at a time. It runs on three platforms: Helm, the enterprise agent platform, where agents are organised by role and Flow orchestrates them into end-to-end value streams; Data Prism, the data lake and semantic foundation; and Strata, the machine learning and prediction layer. Matrix is AyattAI's Digital Chief of Staff: an AI agent that observes the entire enterprise, surfaces risks and priorities, and coordinates cross-functional action continuously.",
       "url": "https://ayatt.ai",
       "logo": "https://ayatt.ai/favicon.png",
       "foundingDate": "2025",
@@ -1660,7 +1709,7 @@ button:focus-visible, a:focus-visible {
           "name": "What is AyattAI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AyattAI is the enterprise nervous system for AI: an enterprise agentic AI platform that deploys cross-functional AI agents across CXO roles and business value streams. It connects goals, tasks, data, and decisions so AI agents collaborate and deliver measurable business outcomes."
+            "text": "AyattAI is an enterprise agentic AI platform that deploys cross-functional AI agents across CXO roles and business value streams. It connects goals, tasks, data, and decisions so AI agents collaborate and deliver measurable business outcomes."
           }
         },
         {
@@ -1710,7 +1759,7 @@ button:focus-visible, a:focus-visible {
       "@id": "https://ayatt.ai/#website",
       "url": "https://ayatt.ai",
       "name": "AyattAI",
-      "description": "The enterprise nervous system for AI",
+      "description": "Enterprise agentic AI, in production in twelve weeks",
       "publisher": {
         "@id": "https://ayatt.ai/#organization"
       }
@@ -1765,8 +1814,9 @@ try {
     <div class="nav-drop">
           <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
           <div class="nav-drop-panel" role="menu">
-            <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
             <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, build and enablement</span></a>
+            <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
+            <a href="index.html#economics"><span class="ndt">The Economics</span><span class="ndd">Why the second quarter costs less</span></a>
           </div>
         </div>
     <div class="nav-drop">
@@ -1790,30 +1840,25 @@ try {
 <section class="hero" id="hero">
   <canvas id="neural-canvas"></canvas>
   <div class="hero-inner">
-    <div class="hero-eyebrow">Enterprise Agentic AI Platform</div>
+    <div class="hero-eyebrow">Enterprise Agentic AI</div>
     <h1 class="hero-h1">
-      The enterprise<br>
-      nervous system<br>
-      <em>for AI.</em>
+      Agents in production<br>
+      in twelve weeks.<br>
+      <em>One approved skill at a time.</em>
     </h1>
     <p class="hero-sub">
-      AyattAI connects goals, tasks, data, and decisions so cross-functional AI agents collaborate and deliver measurable business outcomes.
+      We start by mapping how your work actually runs, then tell you which steps should <strong>not</strong> become agents. What we build compounds: each shared skill serves several agents, so your second quarter costs less than your first.
     </p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Explore AyattAI</a>
-      <a href="#nervous-system" class="btn-ghost">See how it works</a>
+      <a href="#case-study" class="btn-primary">See what shipped &rarr;</a>
+      <a href="#ai-strategy" class="btn-ghost">How we decide what to build</a>
     </div>
   </div>
-
 </section>
 
 <!-- ─── STATS BAND ─── -->
 <div class="stats-band">
   <div class="stats-inner">
-    <div class="stat-cell">
-      <div class="stat-num">1</div>
-      <div class="stat-label">Enterprise nervous<br>system for AI</div>
-    </div>
     <div class="stat-cell">
       <div class="stat-num">3</div>
       <div class="stat-label">Enterprise<br>platforms</div>
@@ -1827,63 +1872,14 @@ try {
       <div class="stat-label">Agentic<br>AI layers</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-num">∞</div>
+      <div class="stat-num">&#8734;</div>
       <div class="stat-label">AI agents<br>deployed</div>
     </div>
   </div>
 </div>
-
 <!-- ─── FOUNDER ─── -->
 
 <!-- ═══ THE NAME (reflective) ═══ -->
-<section id="the-name" class="ayatt-sec section-pad">
-  <div class="section-wrap">
-    <div class="ayatt-inner">
-      <p class="ayatt-word">&#257;yatt</p>
-      <p class="ayatt-say">Pronounced eye-uht</p>
-      <div class="ayatt-rule"></div>
-      <p class="ayatt-def">From the Sanskrit word <em>Sv&#257;yatt</em>:<br>self-governing. Autonomous.<br>Answerable to itself.</p>
-      <p class="ayatt-body">We did not choose a name that describes what we build. We chose one that describes what we believe an enterprise should become. <strong>Autonomy without answerability is just risk moving faster.</strong> Every agent we ship carries a name, a boundary and a record, because self-governing was never meant to mean unsupervised.</p>
-    </div>
-  </div>
-</section>
-
-<section id="founder" class="warm-bg section-pad">
-  <div class="section-wrap" role="main">
-    <div class="fdr">
-      <div>
-        <div class="fdr-photo">
-          <img src="assets/ravi-portrait.webp" alt="Ravi Teja Bommireddipalli, Founder and CEO of AyattAI, speaking at a keynote" width="900" height="1026">
-        </div>
-        <p class="fdr-name">Ravi Teja Bommireddipalli</p>
-        <p class="fdr-role">Founder &amp; CEO, AyattAI &middot; formerly Global CEO, Robosoft Technologies</p>
-      </div>
-      <div>
-        <p class="eyebrow eyebrow--sky">From the Founder</p>
-        <p class="fdr-quote">Thirty years in IT taught me what software can take. The last three taught me <em>what it must never be allowed to take.</em></p>
-        <p class="fdr-body">I spent three decades building enterprise systems, and seven years as a global CEO growing one seven-fold. I have watched a great many transformations succeed on paper and fail in the corridor, because the technology was ready and the people were not consulted.</p>
-        <p class="fdr-body">So AyattAI is not a bet that AI gets cleverer. <strong>It is a bet that judgment stays human, and that the systems around it should be built to protect that.</strong> That is why every layer we ship has a gate, and why every action has someone's name against it.</p>
-        <div class="fdr-acts">
-          <a class="fdr-btn" href="#founder-film">Hear it from me &middot; 2 min &#9654;</a>
-          <a class="fdr-btn fdr-btn--ghost" href="https://www.linkedin.com/newsletters/ravipov-7418005987107958784/" target="_blank" rel="noopener noreferrer">Read #RaviPOV &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div id="founder-film" style="margin:4rem auto 0;max-width:880px">
-      <div class="vid-fac" id="vid-fac" role="button" tabindex="0"
-           aria-label="Play: 30 Years in IT. One Startup. One Big Bet."
-           onclick="playFounderFilm()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playFounderFilm();}">
-        <div class="vid-play" id="vid-play">
-          <span class="vid-ring"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path d="M2 2 L18 11 L2 20 Z" fill="#3EB4E0"/></svg></span>
-          <span class="vid-t">30 Years in IT. One Startup. One Big Bet.</span>
-          <span class="vid-s">2 min &middot; in Ravi&rsquo;s own words</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CASE STUDY ═══ -->
 <section id="case-study" class="cs-sec section-pad">
   <div class="section-wrap">
     <div class="cs-grid">
@@ -1909,6 +1905,54 @@ try {
 </section>
 
 <!-- ═══ METHODOLOGY ═══ -->
+<section id="the-name" class="ayatt-sec section-pad">
+  <div class="section-wrap">
+    <div class="ayatt-inner">
+      <p class="ayatt-word">&#257;yatt</p>
+      <p class="ayatt-say">Pronounced eye-uht</p>
+      <div class="ayatt-rule"></div>
+      <p class="ayatt-def">From the Sanskrit word <em>Sv&#257;yatt</em>:<br>self-governing. Autonomous.<br>Answerable to itself.</p>
+      <p class="ayatt-body">We did not choose a name that describes what we build. We chose one that describes what we believe an enterprise should become. <strong>Autonomy without answerability is just risk moving faster.</strong> Every agent we ship carries a name, a boundary and a record, because self-governing was never meant to mean unsupervised.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder" class="warm-bg section-pad">
+  <div class="section-wrap" role="main">
+    <div class="fdr">
+      <div>
+        <div class="fdr-photo">
+          <img src="assets/ravi-portrait.webp" alt="Ravi Teja Bommireddipalli, Founder and CEO of AyattAI, speaking at a keynote" width="900" height="1026">
+        </div>
+        <p class="fdr-name">Ravi Teja Bommireddipalli</p>
+        <p class="fdr-role">Founder &amp; CEO, AyattAI &middot; formerly Global CEO, Robosoft Technologies</p>
+      </div>
+      <div>
+        <p class="eyebrow eyebrow--sky">From the Founder</p>
+        <p class="fdr-quote">I have watched more transformations fail in the corridor than in the code. <em>That is why this one starts with your work, not our tool.</em></p>
+        <p class="fdr-body">Thirty years building enterprise systems. Seven as a global CEO, growing a private-equity-backed firm sevenfold. I have carried a P&amp;L, so I know what it costs to be wrong about a technology decision, and I know that most AI programmes fail for reasons that have nothing to do with the model.</p>
+        <p class="fdr-body">On your engagement, I am in the room. Not a forward-deployed engineer and not an account manager, the person accountable for whether this works. <strong>That is the difference between buying software and having a partner who has run a business.</strong></p>
+        <div class="fdr-acts">
+          <a class="fdr-btn" href="#founder-film">Hear it from me &middot; 2 min &#9654;</a>
+          <a class="fdr-btn fdr-btn--ghost" href="https://www.linkedin.com/newsletters/ravipov-7418005987107958784/" target="_blank" rel="noopener noreferrer">Read #RaviPOV &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div id="founder-film" style="margin:4rem auto 0;max-width:880px">
+      <div class="vid-fac" id="vid-fac" role="button" tabindex="0"
+           aria-label="Play: 30 Years in IT. One Startup. One Big Bet."
+           onclick="playFounderFilm()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playFounderFilm();}">
+        <div class="vid-play" id="vid-play">
+          <span class="vid-ring"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path d="M2 2 L18 11 L2 20 Z" fill="#3EB4E0"/></svg></span>
+          <span class="vid-t">30 Years in IT. One Startup. One Big Bet.</span>
+          <span class="vid-s">2 min &middot; in Ravi&rsquo;s own words</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CASE STUDY ═══ -->
 <section id="nervous-system" class="layers-bg section-pad" style="scroll-margin-top:72px">
 <section id="layers">
   <div class="section-wrap">
@@ -2053,13 +2097,6 @@ try {
           </div>
         </div>
       </div>
-
-      <div class="arch-app">
-        <span class="arch-app-chip">Application</span>
-        <img class="arch-app-logo" src="assets/matrix-logo.webp" alt="Matrix: the Digital Chief of Staff" width="560" height="196" loading="lazy" decoding="async">
-        <p class="arch-app-desc">Not a platform. Matrix is the flagship application built on Helm: it observes the whole enterprise, surfaces what needs a decision, and coordinates the agents on the CEO's behalf. <a href="matrix.html">Explore Matrix &rarr;</a></p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -2706,6 +2743,83 @@ try {
 
 
 <!-- ─── LAYERS (dark) ─── -->
+
+<!-- ═══ COMPOUNDING ECONOMICS ═══ -->
+<section id="economics" class="eco-sec section-pad">
+  <div class="section-wrap">
+    <p class="eyebrow eyebrow--sky centered">The economics</p>
+    <h2 class="section-title section-title--white centered">Your second quarter<br>costs less than your first.</h2>
+    <p class="section-desc section-desc--steel centered">Most enterprise AI gets more expensive as it grows, because every new use case is built from nothing. Ours gets cheaper, because the unit we build is a skill, and skills are reused.</p>
+    <div class="divider divider--center"></div>
+
+    <div class="eco-grid">
+      <div>
+        <p class="eco-h">Build a skill once.<br><em>Deploy it everywhere it fits.</em></p>
+        <p class="eco-b">An agent isn't a monolith. It's a set of discrete skills: retrieve this, compare against that, generate the briefing, trigger the alert. Some are unique to one agent. <strong>Many are not.</strong></p>
+        <ol class="eco-steps">
+          <li>Discovery identifies every skill each agent needs, and <strong>which ones are the same skill.</strong></li>
+          <li>Shared skills are built first, because each one pays back across several agents at once.</li>
+          <li>The next agent costs less than the last, because part of it <strong>already exists and is already tested.</strong></li>
+        </ol>
+      </div>
+      <div>
+        <svg class="eco-svg" viewBox="0 0 460 340" role="img"
+             aria-label="Diagram: one shared skill built once is deployed into three separate agents, while agent-specific skills are built individually.">
+          <defs>
+            <marker id="ea" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+              <path d="M0,1 L6,5 L0,9" fill="none" stroke="#3EB4E0" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <text x="76" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#3EB4E0" text-anchor="middle">BUILT ONCE</text>
+          <rect x="8" y="40" width="136" height="52" rx="4" fill="rgba(62,180,224,.14)" stroke="#3EB4E0" stroke-opacity=".6"/>
+          <text x="76" y="63" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Shared skill</text>
+          <text x="76" y="80" font-size="11" fill="#B0C4D4" text-anchor="middle">e.g. deadline alerting</text>
+
+          <path d="M144 66 C 210 66, 210 76, 300 76" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+          <path d="M144 66 C 210 66, 210 170, 300 170" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+          <path d="M144 66 C 210 66, 210 264, 300 264" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+
+          <text x="384" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#8CA3B4" text-anchor="middle">DEPLOYED THREE TIMES</text>
+          <g>
+            <rect x="308" y="48" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="70" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Agent A</text>
+            <text x="380" y="88" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 2 skills of its own</text>
+          </g>
+          <g>
+            <rect x="308" y="142" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="164" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Agent B</text>
+            <text x="380" y="182" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 3 skills of its own</text>
+          </g>
+          <g>
+            <rect x="308" y="236" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="258" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Agent C</text>
+            <text x="380" y="276" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 1 skill of its own</text>
+          </g>
+
+          <line x1="8" y1="316" x2="452" y2="316" stroke="#FFF" stroke-opacity=".12"/>
+          <text x="230" y="334" font-size="12" fill="#B0C4D4" text-anchor="middle">You paid for one skill. Three agents use it.</text>
+        </svg>
+        <p class="eco-note">Illustrative. The actual ratio of shared to agent-specific skills is established during discovery, before anything is committed.</p>
+      </div>
+    </div>
+
+    <div class="eco-model">
+      <div class="eco-card">
+        <div class="eco-card-t">You buy skills, not a platform</div>
+        <p class="eco-card-d">No licence to sign before you've seen anything work. The unit of purchase is a single skill.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-card-t">You approve each one</div>
+        <p class="eco-card-d">Every skill is priced, scoped and approved individually. You control the pace and you control the scope.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-card-t">You can stop at any point</div>
+        <p class="eco-card-d">What's built stays working. There's no cliff, no all-or-nothing commitment, and no eighteen-month leap of faith.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="integrations" class="integrations-bg section-pad-sm">
   <div class="section-wrap">
     <p class="eyebrow eyebrow--sky centered">Integrations</p>
@@ -2914,7 +3028,7 @@ try {
     <div class="faq-list" id="faq-list">
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">What is AyattAI?<span class="faq-icon">+</span></div>
-        <div class="faq-answer">AyattAI is an enterprise agentic AI platform, the enterprise nervous system for AI. It deploys cross-functional AI agents across CXO roles and business value streams, connecting goals, tasks, data, and decisions so AI agents collaborate and deliver measurable business outcomes.</div>
+        <div class="faq-answer">AyattAI is an enterprise agentic AI platform. It deploys cross-functional AI agents across CXO roles and business value streams, connecting goals, tasks, data, and decisions so AI agents collaborate and deliver measurable business outcomes.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">What does āyatt mean?<span class="faq-icon">+</span></div>
@@ -3020,6 +3134,7 @@ try {
     <a href="index.html#agents" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Agents</a>
     <a href="index.html#services" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Services</a>
     <a href="index.html#ai-strategy" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Strategy</a>
+    <a href="index.html#economics" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Economics</a>
     <a href="index.html#case-study" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Case Study</a>
     <a href="press-release-first-production-rollout.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Press</a>
     <a href="ravipov.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">RaviPOV</a>
