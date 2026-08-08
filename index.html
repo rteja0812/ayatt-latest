@@ -772,7 +772,15 @@ body.has-announce .hero {
   font-weight: 600;
   color: var(--white);
   letter-spacing: -0.3px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.svc-sub {
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--steel2);
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 .svc-line { width: 24px; height: 1px; background: var(--sky); margin-bottom: 1.2rem; }
 .svc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
@@ -1591,6 +1599,7 @@ button:focus-visible, a:focus-visible {
 
 /* services cards */
 .svc-card{text-align:center}
+.svc-sub{text-align:center}
 .svc-list{align-items:center}
 .svc-list li{text-align:left}
 
@@ -1667,7 +1676,37 @@ button:focus-visible, a:focus-visible {
       },
       "sameAs": [
         "https://www.linkedin.com/company/ayattai"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AyattAI Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Strategy",
+              "description": "A five-phase method that starts with how the organisation actually works. Every workflow is inventoried, scored against a three-signal test for AI candidacy, clustered into named agents, decomposed into skills, and ranked into a build backlog the client approves before anything is built."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agentic Process Redesign",
+              "description": "Redesigning how enterprise work runs when part of the team is digital. Covers process redesign around a mixed human and agent team, handoff design, autonomy levels and approval flows, agent build and production deployment, and integration with existing enterprise systems."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Training",
+              "description": "Equipping client teams to work with, manage and govern AI. Includes executive enablement, practitioner cohorts and working sessions, skill library and prompt discipline, and managing digital colleagues. Training builds internal capability rather than vendor dependency."
+            }
+          }
+        ]
+      }
     },
     {
       "@type": "SoftwareApplication",
@@ -1814,8 +1853,10 @@ try {
     <div class="nav-drop">
           <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
           <div class="nav-drop-panel" role="menu">
-            <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, build and enablement</span></a>
-            <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked skill backlog</span></a>
+            <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, redesign and training</span></a>
+            <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked build backlog</span></a>
+            <a href="index.html#services"><span class="ndt">Agentic Process Redesign</span><span class="ndd">Work redesigned for a mixed team</span></a>
+            <a href="index.html#services"><span class="ndt">AI Training</span><span class="ndd">Your people, ready to lead AI</span></a>
             <a href="index.html#economics"><span class="ndt">The Economics</span><span class="ndd">Why the second quarter costs less</span></a>
           </div>
         </div>
@@ -2460,43 +2501,46 @@ try {
         <p class="eyebrow eyebrow--sky">3 AI Services</p>
         <h2 class="section-title section-title--white">Transformation services<br>for enterprise execution.</h2>
       </div>
-      <p class="section-desc section-desc--steel">AyattAI helps organizations define the strategy, build the agents, and create the data foundation required to deploy enterprise-grade agentic AI at scale.</p>
+      <p class="section-desc section-desc--steel">Three services in sequence. Strategy decides what should change. Process redesign defines how the work runs when part of the team is digital. Training equips your people to lead, manage and govern it.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card">
         <div class="svc-num">01</div>
         <div class="svc-name">AI Strategy</div>
+        <div class="svc-sub">From value stream to a ranked hiring plan for digital work.</div>
         <div class="svc-line"></div>
         <ul class="svc-list">
-          <li>Agentic operating model</li>
-          <li>Value stream redesign</li>
-          <li>Role mapping and decision rights</li>
-          <li>Governance and guardrails</li>
-          <li>Phased adoption roadmap</li>
+          <li>Value stream and workflow inventory</li>
+          <li>Three-signal test for AI candidacy</li>
+          <li>Agent clustering and role definition</li>
+          <li>Governance, guardrails and decision rights</li>
+          <li>Ranked build backlog you approve</li>
         </ul>
       </div>
       <div class="svc-card">
         <div class="svc-num">02</div>
-        <div class="svc-name">AI Agent Development</div>
+        <div class="svc-name">Agentic Process Redesign</div>
+        <div class="svc-sub">Redesigning how your work runs when part of the team is digital.</div>
         <div class="svc-line"></div>
         <ul class="svc-list">
-          <li>Agents for every executive function</li>
-          <li>Flow orchestration across value streams</li>
-          <li>Cross-functional agent collaboration</li>
+          <li>Process rebuilt around a mixed team</li>
+          <li>Human and agent handoff design</li>
           <li>Autonomy levels and approval flows</li>
-          <li>Enterprise-grade integrations</li>
+          <li>Agents built and put into production</li>
+          <li>Enterprise system integration</li>
         </ul>
       </div>
       <div class="svc-card">
         <div class="svc-num">03</div>
-        <div class="svc-name">Data Engineering</div>
+        <div class="svc-name">AI Training</div>
+        <div class="svc-sub">Equipping your people to work with, manage and govern AI.</div>
         <div class="svc-line"></div>
         <ul class="svc-list">
-          <li>Vector memory and enterprise knowledge</li>
-          <li>RAG and context pipelines</li>
-          <li>MCP and system connectivity</li>
-          <li>Data contracts and data products</li>
-          <li>Observability and reliability</li>
+          <li>Executive and leadership enablement</li>
+          <li>Practitioner cohorts and working sessions</li>
+          <li>Skill library and prompt discipline</li>
+          <li>Managing digital colleagues</li>
+          <li>Capability transfer, not dependency</li>
         </ul>
       </div>
     </div>
