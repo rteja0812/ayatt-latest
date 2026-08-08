@@ -106,14 +106,13 @@ nav{position: fixed;
   border-radius: 1px;
   transition: all .3s;}
 #mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:999;
-  flex-direction:column;align-items:stretch;justify-content:flex-start;
   overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#mobile-menu.open{display:block}   /* block, not flex: flex children shrink and kill the scroll */
 #mm-close{position:sticky;top:0;z-index:2;display:flex;justify-content:flex-end;
   padding:14px 18px;background:var(--navy);border-bottom:1px solid var(--border)}
 #mm-close button{background:none;border:none;cursor:pointer;font-size:26px;color:var(--steel2);
   line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
-#mobile-menu nav{display:flex;flex-direction:column;align-items:stretch;width:100%;
-  padding:.5rem 0 3.5rem}
+#mobile-menu nav{display:block;width:100%;padding:.5rem 0 4rem}
 #mobile-menu nav a{font-size:16.5px;color:var(--steel2);text-decoration:none;padding:13px 24px;
   width:100%;text-align:center;border-bottom:1px solid var(--border);min-height:44px;
   display:flex;align-items:center;justify-content:center}
@@ -279,7 +278,7 @@ nav{position: fixed;
 </main>
 
 <footer>
-  <p>&copy; 2026 AyattAI, Inc. &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a></p>
+  <p>&copy; 2026 AyattAI, Inc. &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/company/ayattai" target="_blank" rel="noopener">Follow on LinkedIn</a> &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a></p>
 </footer>
 
 <!-- ─── MOBILE MENU ─── -->
@@ -316,9 +315,11 @@ nav{position: fixed;
 <script>
 function toggleMenu(){
   const m = document.getElementById('mobile-menu');
-  const open = m.style.display==='flex';
-  m.style.display = open ? 'none' : 'flex';
-  document.body.style.overflow = open ? '' : 'hidden';
+  const open = m.classList.toggle('open');
+  document.body.style.overflow = open ? 'hidden' : '';
+  const h = document.getElementById('hamburger');
+  if(h) h.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if(open) m.scrollTop = 0;
 }
 </script>
 
