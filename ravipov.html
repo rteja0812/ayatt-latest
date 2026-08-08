@@ -106,9 +106,34 @@ footer{background:#080F18;border-top:1px solid var(--border);padding:2.5rem;text
 .footer-li-btn:hover{opacity:0.85}
 .footer-copy{font-size:11px;color:var(--steel);padding-top:1.2rem;border-top:1px solid var(--border)}
 
-#mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:999;
+/* ─── MOBILE MENU: accordion, sized to fit without scrolling ─── */
+#mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:1001;
   overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-#mobile-menu.open{display:block}   /* block, not flex: flex children shrink and kill the scroll */
+#mobile-menu.open{display:block}
+#mm-close{display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;border-bottom:1px solid var(--border);min-height:72px}
+#mm-close img{height:26px;width:auto}
+#mm-close button{background:none;border:none;cursor:pointer;font-size:26px;color:var(--steel2);
+  line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+#mobile-menu nav{display:block;padding:.6rem 0 2.4rem}
+.mm-tog{display:flex;align-items:center;justify-content:space-between;width:100%;
+  background:none;border:0;border-bottom:1px solid var(--border);cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:16.5px;font-weight:500;color:var(--white);
+  padding:15px 22px;min-height:52px;text-align:left}
+.mm-car{color:var(--sky);font-size:19px;line-height:1;transition:transform .2s}
+.mm-grp.open .mm-car{transform:rotate(45deg)}
+.mm-sub{display:none;background:rgba(0,0,0,.18);padding:4px 0}
+.mm-grp.open .mm-sub{display:block}
+.mm-sub a{display:flex;align-items:center;font-size:15px;color:var(--steel2);text-decoration:none;
+  padding:11px 22px 11px 34px;min-height:44px;border-bottom:1px solid rgba(255,255,255,.05)}
+.mm-sub a:last-child{border-bottom:0}
+.mm-lnk{display:flex;align-items:center;font-size:16.5px;font-weight:500;color:var(--white);
+  text-decoration:none;padding:15px 22px;min-height:52px;border-bottom:1px solid var(--border)}
+#mobile-menu a:active,.mm-tog:active{background:rgba(62,180,224,.12)}
+a.mm-cta{display:flex;align-items:center;justify-content:center;margin:1.5rem 22px 0;
+  background:var(--sky);color:#fff;font-size:15.5px;font-weight:600;text-decoration:none;
+  border-radius:4px;padding:15px 22px;min-height:48px}
+/* block, not flex: flex children shrink and kill the scroll */
 #mm-close{position:sticky;top:0;z-index:2;display:flex;justify-content:flex-end;
   padding:14px 18px;background:var(--navy);border-bottom:1px solid var(--border)}
 #mm-close button{background:none;border:none;cursor:pointer;font-size:26px;color:var(--steel2);
@@ -511,32 +536,50 @@ html:has(body.has-announce) .arc-rail { top: 148px; }
 </footer>
 
 <div id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
-  <div id="mm-close"><button onclick="toggleMenu()" aria-label="Close navigation menu">&#10005;</button></div>
+  <div id="mm-close">
+    <img src="assets/ayattai-logo.webp" alt="AyattAI" width="120" height="26">
+    <button onclick="toggleMenu()" aria-label="Close navigation menu">&#10005;</button>
+  </div>
   <nav aria-label="Mobile navigation">
-    <p class="mm-k">Platform</p>
-    <a href="index.html#platforms" onclick="toggleMenu()">Helm</a>
-    <a href="index.html#dataprism" onclick="toggleMenu()">Data Prism</a>
-    <a href="index.html#strata" onclick="toggleMenu()">Strata</a>
-    <a href="matrix.html" onclick="toggleMenu()">Matrix</a>
-    <p class="mm-k">Agents</p>
-    <a href="index.html#agents" onclick="toggleMenu()">AI Agents</a>
-    <p class="mm-k">Architecture</p>
-    <a href="index.html#architecture" onclick="toggleMenu()">The Capability Stack</a>
-    <a href="index.html#nervous-system" onclick="toggleMenu()">The Seven Layers</a>
-    <a href="index.html#integrations" onclick="toggleMenu()">Integrations</a>
-    <a href="index.html#trust" onclick="toggleMenu()">Trust &amp; Assurance</a>
-    <p class="mm-k">How you buy</p>
-    <a href="index.html#economics" onclick="toggleMenu()">The commercial model</a>
-    <p class="mm-k">Services</p>
-    <a href="ai-strategy.html" onclick="toggleMenu()">AI Strategy</a>
-    <a href="index.html#services" onclick="toggleMenu()">All three services</a>
-    <p class="mm-k">Company</p>
-    <a href="index.html#founder" onclick="toggleMenu()">Founder</a>
-    <a href="index.html#the-name" onclick="toggleMenu()">The Name</a>
-    <a href="index.html#case-study" onclick="toggleMenu()">Case Study</a>
-    <a href="press-release-first-production-rollout.html" onclick="toggleMenu()">Press</a>
-    <a href="ravipov.html" onclick="toggleMenu()">RaviPOV</a>
-    <a href="index.html#contact" onclick="toggleMenu()" class="mm-cta">Contact</a>
+    <div class="mm-grp">
+      <button type="button" class="mm-tog" aria-expanded="false">Platform<span class="mm-car" aria-hidden="true">&#43;</span></button>
+      <div class="mm-sub">
+        <a href="index.html#platforms" onclick="toggleMenu()">Helm</a>
+        <a href="index.html#dataprism" onclick="toggleMenu()">Data Prism</a>
+        <a href="index.html#strata" onclick="toggleMenu()">Strata</a>
+        <a href="matrix.html" onclick="toggleMenu()">Matrix</a>
+      </div>
+    </div>
+    <a class="mm-lnk" href="index.html#agents" onclick="toggleMenu()">AI Agents</a>
+    <div class="mm-grp">
+      <button type="button" class="mm-tog" aria-expanded="false">Architecture<span class="mm-car" aria-hidden="true">&#43;</span></button>
+      <div class="mm-sub">
+        <a href="index.html#architecture" onclick="toggleMenu()">The Capability Stack</a>
+        <a href="index.html#nervous-system" onclick="toggleMenu()">The Seven Layers</a>
+        <a href="index.html#integrations" onclick="toggleMenu()">Integrations</a>
+        <a href="index.html#trust" onclick="toggleMenu()">Trust &amp; Assurance</a>
+      </div>
+    </div>
+    <a class="mm-lnk" href="index.html#economics" onclick="toggleMenu()">How You Buy</a>
+    <div class="mm-grp">
+      <button type="button" class="mm-tog" aria-expanded="false">Services<span class="mm-car" aria-hidden="true">&#43;</span></button>
+      <div class="mm-sub">
+        <a href="ai-strategy.html" onclick="toggleMenu()">AI Strategy</a>
+        <a href="index.html#services" onclick="toggleMenu()">Agentic Process Redesign</a>
+        <a href="index.html#services" onclick="toggleMenu()">AI Training</a>
+      </div>
+    </div>
+    <div class="mm-grp">
+      <button type="button" class="mm-tog" aria-expanded="false">Company<span class="mm-car" aria-hidden="true">&#43;</span></button>
+      <div class="mm-sub">
+        <a href="index.html#founder" onclick="toggleMenu()">Founder</a>
+        <a href="index.html#the-name" onclick="toggleMenu()">The Name</a>
+        <a href="index.html#case-study" onclick="toggleMenu()">Case Study</a>
+        <a href="press-release-first-production-rollout.html" onclick="toggleMenu()">Press</a>
+        <a href="ravipov.html" onclick="toggleMenu()">RaviPOV</a>
+      </div>
+    </div>
+    <a class="mm-cta" href="index.html#contact" onclick="toggleMenu()">Contact</a>
   </nav>
 </div>
 
@@ -561,14 +604,6 @@ function filterCat(cat) {
   });
   document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
 }
-function toggleMenu(){
-  const m = document.getElementById('mobile-menu');
-  const open = m.classList.toggle('open');
-  document.body.style.overflow = open ? 'hidden' : '';
-  const h = document.getElementById('hamburger');
-  if(h) h.setAttribute('aria-expanded', open ? 'true' : 'false');
-  if(open) m.scrollTop = 0;
-}
 function dismissCookie(v) { try { localStorage.setItem('ayattai_cookies', v); } catch(e) {} document.getElementById('cookie-banner').style.display = 'none'; }
 try { if (localStorage.getItem('ayattai_cookies')) document.getElementById('cookie-banner').style.display = 'none'; } catch(e) {}
 </script>
@@ -591,5 +626,49 @@ try { if (localStorage.getItem('ayattai_cookies')) document.getElementById('cook
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeAll(null); });
 })();
 </script>
+<script>
+/* Mobile menu. Deliberately in its own block so nothing else on the page can
+   break it: a throw in an unrelated script would otherwise skip these listeners. */
+function toggleMenu(){
+  var m = document.getElementById('mobile-menu');
+  var open = m.classList.toggle('open');
+  var h = document.getElementById('hamburger');
+  if(h) h.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if(open){
+    /* iOS-safe scroll lock: overflow:hidden on body does not hold on iOS and it
+       interferes with scrolling a fixed overlay, so pin the body instead. */
+    window.__mmY = window.scrollY || window.pageYOffset || 0;
+    var b = document.body.style;
+    b.position='fixed'; b.top=(-window.__mmY)+'px'; b.left='0'; b.right='0'; b.width='100%';
+    m.scrollTop = 0;
+  } else {
+    var b2 = document.body.style;
+    b2.position=''; b2.top=''; b2.left=''; b2.right=''; b2.width='';
+    window.scrollTo(0, window.__mmY || 0);
+    Array.prototype.forEach.call(m.querySelectorAll('.mm-grp.open'), function(g){
+      g.classList.remove('open');
+      var t = g.querySelector('.mm-tog'); if(t) t.setAttribute('aria-expanded','false');
+    });
+  }
+}
+document.addEventListener('click', function(e){
+  var t = e.target.closest ? e.target.closest('.mm-tog') : null;
+  if(!t) return;
+  var grp = t.parentElement;
+  var willOpen = !grp.classList.contains('open');
+  Array.prototype.forEach.call(grp.parentElement.querySelectorAll('.mm-grp.open'), function(g){
+    if(g!==grp){ g.classList.remove('open');
+      var b=g.querySelector('.mm-tog'); if(b) b.setAttribute('aria-expanded','false'); }
+  });
+  if(willOpen) grp.classList.add('open'); else grp.classList.remove('open');
+  t.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+});
+document.addEventListener('keydown', function(e){
+  if(e.key !== 'Escape') return;
+  var m = document.getElementById('mobile-menu');
+  if(m && m.classList.contains('open')) toggleMenu();
+});
+</script>
+
 </body>
 </html>
