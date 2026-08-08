@@ -945,7 +945,7 @@ body.has-announce .hero {
   overflow: hidden;
   transition: max-height .4s ease, padding .3s;
 }
-.faq-item.open .faq-answer { max-height: 300px; padding-top: 0.8rem; }
+.faq-item.open .faq-answer { max-height: 520px; padding-top: 0.8rem; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 
 /* ─── CONTACT ─── */
@@ -1306,6 +1306,11 @@ html { scroll-padding-top: 92px; }
 .mth-more-a{display:inline-flex;align-items:center;min-height:44px;margin-top:1.2rem;
   color:var(--sky);font-size:13.5px;font-weight:600;text-decoration:none;letter-spacing:.02em}
 .mth-more-a:hover{text-decoration:underline}
+
+.svc-principle{max-width:70ch;margin:2.8rem auto 0;text-align:center;font-size:13.5px;
+  line-height:1.8;font-weight:300;color:var(--steel);padding-top:2.2rem;
+  border-top:1px solid var(--border)}
+.svc-principle strong{color:var(--sky);font-weight:600}
 
 /* ── mid-page conversion break ── */
 .cvb{background:var(--warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -1706,7 +1711,7 @@ button:focus-visible, a:focus-visible {
       "@id": "https://ayatt.ai/#organization",
       "name": "AyattAI",
       "alternateName": ["AyattAI Inc", "Ayatt AI", "āyattAI"],
-      "description": "AyattAI puts enterprise AI agents into production in twelve weeks, one hire at a time. It runs on three platforms: Helm, the enterprise agent platform, where agents are organized by role and Flow orchestrates them into end-to-end value streams; Data Prism, the data lake and semantic foundation; and Strata, the machine learning and prediction layer. Matrix is AyattAI's Digital Chief of Staff: an AI agent that observes the entire enterprise, surfaces risks and priorities, and coordinates cross-functional action continuously.",
+      "description": "AyattAI is an enterprise agentic AI platform company. Its revenue is predominantly recurring subscription against digital employees running in production, with transformation services held deliberately below a quarter of total revenue. AyattAI puts enterprise AI agents into production in twelve weeks, one hire at a time. It runs on three platforms: Helm, the enterprise agent platform, where agents are organized by role and Flow orchestrates them into end-to-end value streams; Data Prism, the data lake and semantic foundation; and Strata, the machine learning and prediction layer. Matrix is AyattAI's Digital Chief of Staff: an AI agent that observes the entire enterprise, surfaces risks and priorities, and coordinates cross-functional action continuously.",
       "url": "https://ayatt.ai",
       "logo": "https://ayatt.ai/favicon.png",
       "foundingDate": "2025",
@@ -1746,8 +1751,16 @@ button:focus-visible, a:focus-visible {
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "AyattAI Services",
+        "name": "AyattAI Platform and Services",
         "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://ayatt.ai/#platform"
+            },
+            "description": "Recurring monthly subscription per digital employee running on the AyattAI platform. This is the core product and the majority of AyattAI revenue. A one-time build fee configures each agent to the client process and is capped at a minority of first-year cost.",
+            "category": "Platform subscription"
+          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -1810,6 +1823,14 @@ button:focus-visible, a:focus-visible {
       "@type": "FAQPage",
       "@id": "https://ayatt.ai/#faq",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are you a platform company or a consultancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A platform company. AyattAI's revenue is recurring subscription against digital employees running in production, and services are held deliberately below a quarter of the total. The three services exist because software alone does not change how an organization works: someone has to decide which work should become an agent, redesign the process around a mixed team, and train the people who will manage it. Those engagements are scoped to finish. The platform is what you are left holding, and it is what you keep paying for."
+          }
+        },
         {
           "@type": "Question",
           "name": "What is AyattAI?",
@@ -1920,7 +1941,7 @@ try {
     <div class="nav-drop">
           <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
           <div class="nav-drop-panel" role="menu">
-            <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">Strategy, redesign and training</span></a>
+            <a href="index.html#services"><span class="ndt">All three services</span><span class="ndd">The on-ramp to the platform</span></a>
             <a href="index.html#ai-strategy"><span class="ndt">AI Strategy</span><span class="ndd">Value stream to ranked build backlog</span></a>
             <a href="ai-strategy.html"><span class="ndt">The full method</span><span class="ndd">Every question we score a step against</span></a>
             <a href="index.html#services"><span class="ndt">Agentic Process Redesign</span><span class="ndd">Work redesigned for a mixed team</span></a>
@@ -1962,13 +1983,13 @@ try {
     <div class="hero-btns">
       <a href="#contact" class="btn-primary">Book an executive briefing &rarr;</a>
       <a href="#case-study" class="btn-ghost">See what shipped</a>
-      <a href="#services" class="btn-ghost">What we do</a>
+      <a href="#platforms" class="btn-ghost">See the platform</a>
     </div>
     <p class="hero-model">
-      <strong>You hire, you don't license.</strong> There is no platform fee to sign before you have
-      seen anyone work. You onboard one named digital employee at a time, scoped and priced
-      individually on a published rate card. The platform is ours: it is what makes each hire fast
-      to build and safe to run, and it never appears as a line item.
+      <strong>A subscription, not a project.</strong> Every digital employee runs on the AyattAI
+      platform and is billed monthly for as long as it earns its place. There is a one-time build to
+      fit it to your process, deliberately small and capped at a quarter of what you pay us in year
+      one. The platform is the product. The build is just how it gets to work.
     </p>
   </div>
 </section>
@@ -1981,8 +2002,8 @@ try {
       <div class="stat-label">Enterprise<br>platforms</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-num">3</div>
-      <div class="stat-label">AI transformation<br>services</div>
+      <div class="stat-num">12</div>
+      <div class="stat-label">Weeks to<br>production</div>
     </div>
     <div class="stat-cell">
       <div class="stat-num">7</div>
@@ -2005,351 +2026,9 @@ try {
 
 <!-- ═══ SPEAKING ═══ -->
 
-<section id="services" class="services-bg section-pad">
-  <div class="section-wrap">
-    <div class="agents-header">
-      <div>
-        <p class="eyebrow eyebrow--sky">3 AI Services</p>
-        <h2 class="section-title section-title--white">Transformation services<br>for enterprise execution.</h2>
-      </div>
-      <p class="section-desc section-desc--steel">Three services in sequence. Strategy decides what should change. Process redesign defines how the work runs when part of the team is digital. Training equips your people to lead, manage and govern it.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <div class="svc-num">01</div>
-        <div class="svc-name">AI Strategy</div>
-        <div class="svc-sub">From value stream to a ranked hiring plan for digital work.</div>
-        <div class="svc-line"></div>
-        <ul class="svc-list">
-          <li>Value stream and workflow inventory</li>
-          <li>Three-signal test for AI candidacy</li>
-          <li>Agent clustering and role definition</li>
-          <li>Governance, guardrails and decision rights</li>
-          <li>Ranked build backlog you approve</li>
-        </ul>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">02</div>
-        <div class="svc-name">Agentic Process Redesign</div>
-        <div class="svc-sub">Redesigning how your work runs when part of the team is digital.</div>
-        <div class="svc-line"></div>
-        <ul class="svc-list">
-          <li>Process rebuilt around a mixed team</li>
-          <li>Human and agent handoff design</li>
-          <li>Autonomy levels and approval flows</li>
-          <li>Agents built and put into production</li>
-          <li>Enterprise system integration</li>
-        </ul>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">03</div>
-        <div class="svc-name">AI Training</div>
-        <div class="svc-sub">Equipping your people to work with, manage and govern AI.</div>
-        <div class="svc-line"></div>
-        <ul class="svc-list">
-          <li>Executive and leadership enablement</li>
-          <li>Practitioner cohorts and working sessions</li>
-          <li>Skill library and prompt discipline</li>
-          <li>Managing digital colleagues</li>
-          <li>Capability transfer, not dependency</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ai-strategy" class="mth-sec section-pad">
-  <div class="section-wrap">
-    <p class="eyebrow eyebrow--sky centered">AI Strategy &middot; Service 01</p>
-    <h2 class="section-title section-title--dark centered">We don't start with agents.<br>We start with your work.</h2>
-    <p class="section-desc section-desc--ink centered">Most AI programs begin by choosing a tool. Ours begins by mapping what your organization actually does, step by step, and only then asking which of those steps an agent should own. Five phases, ending in a ranked backlog you approve before anything gets built.</p>
-    <div class="divider divider--center"></div>
-
-    <svg class="mth-svg mth-svg-d" viewBox="0 0 1000 430" role="img"
-         aria-label="Methodology funnel: every workflow is inventoried, scored down to strong AI candidates, clustered into named agents, decomposed into skills, and ranked into a build backlog. Some skills are shared across several agents.">
-      <defs>
-        <marker id="mf" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.6" stroke-linecap="round"/>
-        </marker>
-      </defs>
-
-      <!-- phase labels -->
-      <g font-size="10" font-weight="700" letter-spacing="1.3" fill="#3EB4E0" text-anchor="middle">
-        <text x="100" y="22">PHASE 01</text><text x="300" y="22">PHASE 02</text>
-        <text x="500" y="22">PHASE 03</text><text x="700" y="22">PHASE 04</text>
-        <text x="900" y="22">PHASE 05</text>
-      </g>
-      <g font-family="'Playfair Display',serif" font-size="15" font-weight="700" fill="#1A2B3C" text-anchor="middle">
-        <text x="100" y="44">Value Stream</text><text x="300" y="44">Scoring</text>
-        <text x="500" y="44">Agents</text><text x="700" y="44">Skills</text>
-        <text x="900" y="44">Backlog</text>
-      </g>
-
-      <!-- 01 all workflows: wide -->
-      <g>
-        <rect x="34" y="72" width="132" height="240" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <g fill="#FFF" stroke="#0D1E30" stroke-opacity=".14">
-          <rect x="46" y="84" width="108" height="20" rx="2"/><rect x="46" y="110" width="108" height="20" rx="2"/>
-          <rect x="46" y="136" width="108" height="20" rx="2"/><rect x="46" y="162" width="108" height="20" rx="2"/>
-          <rect x="46" y="188" width="108" height="20" rx="2"/><rect x="46" y="214" width="108" height="20" rx="2"/>
-          <rect x="46" y="240" width="108" height="20" rx="2"/><rect x="46" y="266" width="108" height="20" rx="2"/>
-        </g>
-        <text x="100" y="333" font-size="12" fill="#3D5166" text-anchor="middle">Every workflow,</text>
-        <text x="100" y="349" font-size="12" fill="#3D5166" text-anchor="middle">as it really runs</text>
-      </g>
-      <path d="M172 192 L196 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
-
-      <!-- 02 scored: narrows -->
-      <g>
-        <rect x="234" y="110" width="132" height="164" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <g stroke="#0D1E30" stroke-opacity=".14">
-          <rect x="246" y="122" width="108" height="20" rx="2" fill="#FFF"/>
-          <rect x="246" y="148" width="108" height="20" rx="2" fill="#FFF"/>
-          <rect x="246" y="174" width="108" height="20" rx="2" fill="#FFF"/>
-          <rect x="246" y="200" width="108" height="20" rx="2" fill="#FFF"/>
-          <rect x="246" y="226" width="108" height="20" rx="2" fill="#FFF"/>
-        </g>
-        <text x="300" y="295" font-size="12" fill="#3D5166" text-anchor="middle">3 or 4 &ldquo;yes&rdquo; answers</text>
-        <text x="300" y="311" font-size="12" fill="#3D5166" text-anchor="middle">= strong candidate</text>
-      </g>
-      <path d="M372 192 L396 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
-
-      <!-- 03 agents: clustered -->
-      <g>
-        <rect x="434" y="122" width="132" height="140" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
-        <g stroke="#C9832A" stroke-opacity=".4" fill="#FFF">
-          <rect x="446" y="136" width="108" height="34" rx="3"/>
-          <rect x="446" y="178" width="108" height="34" rx="3"/>
-          <rect x="446" y="220" width="108" height="30" rx="3"/>
-        </g>
-        <g font-size="10.5" fill="#8A5A18" text-anchor="middle">
-          <text x="500" y="157">Named agent</text><text x="500" y="199">Named agent</text>
-          <text x="500" y="240">Named agent</text>
-        </g>
-        <text x="500" y="295" font-size="12" fill="#3D5166" text-anchor="middle">One decision-maker,</text>
-        <text x="500" y="311" font-size="12" fill="#3D5166" text-anchor="middle">one data context, one purpose</text>
-      </g>
-      <path d="M572 192 L596 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
-
-      <!-- 04 skills: widens again, some shared -->
-      <g>
-        <rect x="634" y="88" width="132" height="208" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <g stroke-opacity=".16" stroke="#0D1E30">
-          <rect x="646" y="100" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="646" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="646" y="148" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="646" y="172" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="646" y="196" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="646" y="220" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="646" y="244" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="646" y="268" width="108" height="18" rx="2" fill="#FFF"/>
-        </g>
-        <text x="700" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Retrieve &middot; analyze</text>
-        <text x="700" y="341" font-size="12" fill="#3D5166" text-anchor="middle">output &middot; act</text>
-      </g>
-      <path d="M772 192 L796 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
-
-      <!-- 05 backlog: ranked, shared first -->
-      <g>
-        <rect x="834" y="88" width="132" height="208" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
-        <g stroke-opacity=".16" stroke="#0D1E30">
-          <rect x="846" y="100" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="846" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="846" y="148" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
-          <rect x="846" y="172" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="846" y="196" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="846" y="220" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="846" y="244" width="108" height="18" rx="2" fill="#FFF"/>
-          <rect x="846" y="268" width="108" height="18" rx="2" fill="#FFF"/>
-        </g>
-        <text x="900" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Ranked. Shared skills</text>
-        <text x="900" y="341" font-size="12" fill="#3D5166" text-anchor="middle">built first.</text>
-      </g>
-
-      <!-- the reuse argument, drawn -->
-      <path d="M700 300 C 700 380, 900 380, 900 300" fill="none" stroke="#3EB4E0"
-            stroke-width="1.3" stroke-opacity=".5" stroke-dasharray="4 3"/>
-      <text x="800" y="400" font-size="11.5" font-weight="600" fill="#3EB4E0" text-anchor="middle">
-        one skill, several agents &middot; build once</text>
-    </svg>
-
-    <svg class="mth-svg mth-svg-m" viewBox="0 0 380 700" role="img" aria-hidden="true">
-      <defs>
-        <marker id="mfm" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.8" stroke-linecap="round"/>
-        </marker>
-      </defs>
-
-      <g text-anchor="middle">
-        <text x="190" y="16" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 01</text>
-        <rect x="20" y="24" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <text x="190" y="52" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Value Stream</text>
-        <text x="190" y="76" font-size="12" fill="#3D5166">Every workflow, as it really runs,</text>
-        <text x="190" y="94" font-size="12" fill="#3D5166">not as the process document claims.</text>
-        <path d="M190 116 L190 132" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
-
-        <text x="190" y="152" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 02</text>
-        <rect x="20" y="160" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <text x="190" y="188" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Scoring</text>
-        <text x="190" y="212" font-size="12" fill="#3D5166">Four questions per step.</text>
-        <text x="190" y="230" font-size="12" fill="#3D5166">Three or four &ldquo;yes&rdquo; = strong candidate.</text>
-        <path d="M190 252 L190 268" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
-
-        <text x="190" y="288" font-size="10" font-weight="700" letter-spacing="1.1" fill="#C9832A">PHASE 03</text>
-        <rect x="20" y="296" width="340" height="86" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
-        <text x="190" y="324" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#8A5A18">Agents</text>
-        <text x="190" y="348" font-size="12" fill="#3D5166">Steps cluster into named agents</text>
-        <text x="190" y="366" font-size="12" fill="#3D5166">on all three signals at once.</text>
-        <path d="M190 388 L190 404" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
-
-        <text x="190" y="424" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 04</text>
-        <rect x="20" y="432" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
-        <text x="190" y="460" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Skills</text>
-        <text x="190" y="484" font-size="12" fill="#3D5166">Each agent breaks into skills:</text>
-        <text x="190" y="502" font-size="12" fill="#3D5166">retrieve, analyze, output, act.</text>
-        <path d="M190 524 L190 540" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
-
-        <text x="190" y="560" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 05</text>
-        <rect x="20" y="568" width="340" height="104" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
-        <text x="190" y="596" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Backlog</text>
-        <text x="190" y="620" font-size="12" fill="#3D5166">Ranked by impact &times; readiness.</text>
-        <text x="190" y="640" font-size="12" fill="#3EB4E0" font-weight="600">Shared skills built first:</text>
-        <text x="190" y="658" font-size="12" fill="#3EB4E0" font-weight="600">one skill serves several agents.</text>
-      </g>
-    </svg>
-
-    <div class="mth-legend">
-      <span class="mth-key"><span class="mth-sw" style="background:#E8F6FC;border:1px solid rgba(62,180,224,.5)"></span>
-        <b>Shared skill</b> &middot; reusable across agents</span>
-      <span class="mth-key"><span class="mth-sw" style="background:#FCF7F0;border:1px solid rgba(201,131,42,.4)"></span>
-        <b>Agent</b> &middot; a named operational role</span>
-    </div>
-
-    <div class="mth-more">
-      <p class="mth-more-p">The five phases above are the shape of it. The scoring questions, the
-        three clustering signals and the ranking rubric are all published: nothing about how we decide
-        what to build is proprietary, because a method you cannot inspect is a method you cannot
-        challenge.</p>
-      <a class="mth-more-a" href="ai-strategy.html">Read the full method &rarr;</a>
-    </div>
-  </div>
-</section>
-
-
-<section id="case-study" class="cs-sec section-pad">
-  <div class="section-wrap">
-    <div class="cs-grid">
-      <div>
-        <span class="cs-tag"><span class="cs-dot"></span>In production &middot; July 2026</span>
-        <h2 class="cs-head">Automotive's first digital employee <em>reported for duty.</em></h2>
-        <p class="cs-body">A multi-billion dollar tier-1 automotive supplier had program management spread across three systems that had never spoken to each other. Twelve weeks later they were one platform, and agents were doing real work inside it.</p>
-        <p class="cs-body">Not a pilot. Not a proof of concept. Phase 1 is live, and the model is extending to further business units.</p>
-        <div class="cs-facts">
-          <div><div class="cs-n">12</div><div class="cs-l">weeks from vision<br>to production</div></div>
-          <div><div class="cs-n">3</div><div class="cs-l">systems unified<br>into one platform</div></div>
-          <div><div class="cs-n">Live</div><div class="cs-l">Phase 1 in production,<br>expanding</div></div>
-        </div>
-        <div class="cs-quote">
-          <p>Enterprise AI isn't impressive demos. It's production systems solving real business problems for real people.
-            <span>Ravi Teja Bommireddipalli, Founder &amp; CEO</span>
-          </p>
-        </div>
-        <a class="cs-link" href="press-release-first-production-rollout.html">Read the announcement &rarr;</a>
-      </div>
-      </div>
-  </div>
-</section>
-
 <!-- ─── CONVERSION BREAK ─── -->
-<section class="cvb" id="briefing">
-  <div class="cvb-in">
-    <p class="cvb-k">Where most people start</p>
-    <h2 class="cvb-h">One conversation, and you will know<br><em>whether this is for you.</em></h2>
-    <p class="cvb-p">An executive briefing is ninety minutes with the founder, not a demo reel and not a discovery call routed to a sales engineer. We walk one of your value streams, you hear where we would and would not put an agent, and you leave with a written view either way. There is no obligation on the other side of it.</p>
-    <div class="cvb-btns">
-      <a href="#contact" class="cvb-b1">Book an executive briefing &rarr;</a>
-      <a href="#contact" class="cvb-b2">Request the architecture brief</a>
-    </div>
-    <p class="cvb-fine">Not ready to talk? Read how we decide what to build, below.</p>
-  </div>
-</section>
 
-
-<section id="economics" class="eco-sec section-pad">
-  <div class="section-wrap">
-    <p class="eyebrow eyebrow--sky centered">The economics</p>
-    <h2 class="section-title section-title--white centered">Your second hire<br>costs less than your first.</h2>
-    <p class="section-desc section-desc--steel centered">Nobody expects the second employee to be cheaper than the first. Digital ones are. Your team shares skills, so each new hire arrives already knowing part of the job.</p>
-    <div class="divider divider--center"></div>
-
-    <div class="eco-grid">
-      <div>
-        <p class="eco-h">Train a skill once.<br><em>Every hire after that already has it.</em></p>
-        <p class="eco-b">A digital employee isn't a monolith. It's a set of discrete skills: retrieve this, compare against that, generate the briefing, raise the alert. Some are unique to one role. <strong>Many are not.</strong></p>
-        <ol class="eco-steps">
-          <li>Discovery identifies every skill each new hire needs, and <strong>which ones your team already has.</strong></li>
-          <li>Shared skills are trained first, because each one pays back across several hires at once.</li>
-          <li>The next hire costs less than the last, because part of the job is <strong>already learned and already tested.</strong></li>
-        </ol>
-      </div>
-      <div>
-        <svg class="eco-svg" viewBox="0 0 460 340" role="img"
-             aria-label="Diagram: one shared skill built once is deployed into three separate agents, while agent-specific skills are built individually.">
-          <defs>
-            <marker id="ea" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-              <path d="M0,1 L6,5 L0,9" fill="none" stroke="#3EB4E0" stroke-width="1.6" stroke-linecap="round"/>
-            </marker>
-          </defs>
-
-          <text x="76" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#3EB4E0" text-anchor="middle">BUILT ONCE</text>
-          <rect x="8" y="40" width="136" height="52" rx="4" fill="rgba(62,180,224,.14)" stroke="#3EB4E0" stroke-opacity=".6"/>
-          <text x="76" y="63" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Shared skill</text>
-          <text x="76" y="80" font-size="11" fill="#B0C4D4" text-anchor="middle">e.g. deadline alerting</text>
-
-          <path d="M144 66 C 210 66, 210 76, 300 76" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
-          <path d="M144 66 C 210 66, 210 170, 300 170" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
-          <path d="M144 66 C 210 66, 210 264, 300 264" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
-
-          <text x="384" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#8CA3B4" text-anchor="middle">DEPLOYED THREE TIMES</text>
-          <g>
-            <rect x="308" y="48" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
-            <text x="380" y="70" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Program Control</text>
-            <text x="380" y="88" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 2 skills of its own</text>
-          </g>
-          <g>
-            <rect x="308" y="142" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
-            <text x="380" y="164" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Procurement</text>
-            <text x="380" y="182" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 3 skills of its own</text>
-          </g>
-          <g>
-            <rect x="308" y="236" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
-            <text x="380" y="258" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Cost Estimator</text>
-            <text x="380" y="276" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 1 skill of its own</text>
-          </g>
-
-          <line x1="8" y1="316" x2="452" y2="316" stroke="#FFF" stroke-opacity=".12"/>
-          <text x="230" y="334" font-size="12" fill="#B0C4D4" text-anchor="middle">You paid for one skill. Three hires use it.</text>
-        </svg>
-        <p class="eco-note">Illustrative. The actual ratio of shared to role-specific skills is established during discovery, before anything is committed.</p>
-      </div>
-    </div>
-
-    <div class="eco-model">
-      <div class="eco-card">
-        <div class="eco-card-t">You hire, you don't license</div>
-        <p class="eco-card-d">No platform license to sign before you've seen anyone work. You onboard a named digital employee with a defined role.</p>
-      </div>
-      <div class="eco-card">
-        <div class="eco-card-t">You approve every hire</div>
-        <p class="eco-card-d">Every digital employee is scoped, priced and approved individually, on a published rate card. You set the pace and the headcount.</p>
-      </div>
-      <div class="eco-card">
-        <div class="eco-card-t">You can stop at any point</div>
-        <p class="eco-card-d">Your existing team keeps working. There's no cliff, no all-or-nothing commitment, and no eighteen-month leap of faith.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ─── TRUST &amp; SECURITY ─── -->
 
 <section id="platforms" class="platforms-bg section-pad">
   <div class="section-wrap">
@@ -2436,66 +2115,72 @@ try {
   </div>
 </section>
 
-<section id="nervous-system" class="layers-bg section-pad" style="scroll-margin-top:72px">
-<section id="layers">
+<section id="agents" class="agents-bg section-pad">
   <div class="section-wrap">
-    <div class="layers-header">
+    <div class="agents-header">
       <div>
-        <p class="eyebrow eyebrow--sky">About AyattAI</p>
-        <h2 class="section-title section-title--white">Seven layers.<br>One connected<br>enterprise.</h2>
+        <p class="eyebrow eyebrow--sky">AI Agents</p>
+        <h2 class="section-title section-title--white">Meet your<br>digital team.</h2>
       </div>
-      <div>
-          <p class="section-desc section-desc--steel">Seven layers form the enterprise nervous system for AI: reasoning, memory, knowledge, awareness, action, governance and collaboration. Ethical guardrails and human-in-the-loop control are built into each one, not bolted on after.</p>
-        </div>
+      <p class="section-desc section-desc--steel">One agent per enterprise function, each purpose-built for the role it owns, and each reused by Flow in every workflow that touches it. Seven functions, one roster, no duplicated logic.</p>
     </div>
-    <div class="layers-grid">
-      <div class="layer-card">
-        <div class="layer-num">01 · Reasoning &amp; Planning</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
-        <div class="layer-name">Intelligence</div>
-        <p class="layer-desc">LLMs interpret language, break down problems, plan sequences of work, and generate recommendations. The brain of the agentic system.</p>
+    <div class="agents-grid">
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <div class="agent-name">Revenue Agent</div>
+        <div class="agent-role">Chief Revenue Officer</div>
+        <p class="agent-desc">Pipeline visibility, lead nurture, proposal acceleration, pricing intelligence, and collections optimization.</p>
       </div>
-      <div class="layer-card">
-        <div class="layer-num">02 · Organizational Memory</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="layer-name">Memory</div>
-        <p class="layer-desc">Remembers patterns, prior decisions, enterprise history, and customer context, giving agents continuity instead of one-off responses.</p>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="agent-name">Program Control</div>
+        <div class="agent-role">Program Management</div>
+        <p class="agent-desc">Milestone tracking, dependency risk, financial exposure, schedule slippage, and early escalation.</p>
       </div>
-      <div class="layer-card">
-        <div class="layer-num">03 · Company-Specific Context</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <div class="layer-name">Knowledge</div>
-        <p class="layer-desc">Company policies, contracts, CRM records, and domain context brought into every decision so AI acts with enterprise-specific understanding.</p>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="agent-name">Marketing Agent</div>
+        <div class="agent-role">Growth &amp; Demand</div>
+        <p class="agent-desc">Campaign planning, content generation, lead scoring, and market signal analysis to drive pipeline growth.</p>
       </div>
-      <div class="layer-card">
-        <div class="layer-num">04 · System Visibility</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <div class="layer-name">Awareness</div>
-        <p class="layer-desc">Connects AI to enterprise systems and signals, observing workflows, tools, transactions, and real-world operating conditions.</p>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="agent-name">HR Agent</div>
+        <div class="agent-role">Hire to Retire</div>
+        <p class="agent-desc">Talent acquisition, onboarding, performance cycles, and workforce planning across the employee lifecycle.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="agent-name">Finance Agent</div>
+        <div class="agent-role">Record to Report</div>
+        <p class="agent-desc">Financial close, reporting, variance analysis, audit readiness, and real-time financial health signals.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <div class="agent-name">Procurement Agent</div>
+        <div class="agent-role">Procure to Pay</div>
+        <p class="agent-desc">Vendor management, purchase approvals, invoice processing, spend analytics, and supplier risk monitoring.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-2.5 6h5L5 7z"/><path d="M19 7l-2.5 6h5L19 7z"/></svg></div>
+        <div class="agent-name">Legal Agent</div>
+        <div class="agent-role">Legal &amp; Compliance</div>
+        <p class="agent-desc">Contract review, regulatory monitoring, policy updates, and statutory deadline tracking across every jurisdiction you operate in.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="agent-name">Governance Agent</div>
+        <div class="agent-role">Guardrails &amp; Trust</div>
+        <p class="agent-desc">Enforces approval flows, policy compliance, audit trails, and human-in-the-loop escalations across all agents.</p>
       </div>
     </div>
-    <div class="layers-row2">
-      <div class="layer-card">
-        <div class="layer-num">05 · Execution &amp; Intervention</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>
-        <div class="layer-name">Action</div>
-        <p class="layer-desc">Where AI becomes agentic. Agents recommend, initiate, and complete work, escalating exceptions to the right humans when needed.</p>
-      </div>
-      <div class="layer-card">
-        <div class="layer-num">06 · Guardrails &amp; Trust</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="layer-name">Governance</div>
-        <p class="layer-desc">Approvals, permissions, observability, policy controls, and auditability, ensuring enterprise AI is safe, trusted, compliant, and accountable.</p>
-      </div>
-      <div class="layer-card">
-        <div class="layer-num">07 · Agents Working Together</div>
-        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="layer-name">Collaboration</div>
-        <p class="layer-desc">The highest value: multiple agents working across roles, teams, and processes to deliver outcomes end-to-end.</p>
-      </div>
+  <div class="flagship">
+      <p class="flagship-chip">Flagship application on Helm</p>
+      <img class="flagship-logo" src="assets/matrix-logo.webp" loading="lazy" decoding="async" alt="Matrix: the Digital Chief of Staff" width="560" height="196">
+      <p class="flagship-desc">The agents run the functions. Matrix runs across all of them: observing enterprise health, prioritizing what needs a decision, and coordinating the roster on your behalf.</p>
+      <a href="matrix.html" class="flagship-cta">Explore Matrix &rarr;</a>
     </div>
-  </div>
-</section>
+    </div>
 </section>
 
 <section id="architecture" class="arc-bg section-pad" style="scroll-margin-top:72px">
@@ -2777,174 +2462,118 @@ try {
   </div>
 </section>
 
-<section id="agents" class="agents-bg section-pad">
+<section id="case-study" class="cs-sec section-pad">
   <div class="section-wrap">
-    <div class="agents-header">
+    <div class="cs-grid">
       <div>
-        <p class="eyebrow eyebrow--sky">AI Agents</p>
-        <h2 class="section-title section-title--white">Meet your<br>digital team.</h2>
+        <span class="cs-tag"><span class="cs-dot"></span>In production &middot; July 2026</span>
+        <h2 class="cs-head">Automotive's first digital employee <em>reported for duty.</em></h2>
+        <p class="cs-body">A multi-billion dollar tier-1 automotive supplier had program management spread across three systems that had never spoken to each other. Twelve weeks later they were one platform, and agents were doing real work inside it.</p>
+        <p class="cs-body">Not a pilot. Not a proof of concept. Phase 1 is live, and the model is extending to further business units.</p>
+        <div class="cs-facts">
+          <div><div class="cs-n">12</div><div class="cs-l">weeks from vision<br>to production</div></div>
+          <div><div class="cs-n">3</div><div class="cs-l">systems unified<br>into one platform</div></div>
+          <div><div class="cs-n">Live</div><div class="cs-l">Phase 1 in production,<br>expanding</div></div>
+        </div>
+        <div class="cs-quote">
+          <p>Enterprise AI isn't impressive demos. It's production systems solving real business problems for real people.
+            <span>Ravi Teja Bommireddipalli, Founder &amp; CEO</span>
+          </p>
+        </div>
+        <a class="cs-link" href="press-release-first-production-rollout.html">Read the announcement &rarr;</a>
       </div>
-      <p class="section-desc section-desc--steel">One agent per enterprise function, each purpose-built for the role it owns, and each reused by Flow in every workflow that touches it. Seven functions, one roster, no duplicated logic.</p>
-    </div>
-    <div class="agents-grid">
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <div class="agent-name">Revenue Agent</div>
-        <div class="agent-role">Chief Revenue Officer</div>
-        <p class="agent-desc">Pipeline visibility, lead nurture, proposal acceleration, pricing intelligence, and collections optimization.</p>
       </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div class="agent-name">Program Control</div>
-        <div class="agent-role">Program Management</div>
-        <p class="agent-desc">Milestone tracking, dependency risk, financial exposure, schedule slippage, and early escalation.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="agent-name">Marketing Agent</div>
-        <div class="agent-role">Growth &amp; Demand</div>
-        <p class="agent-desc">Campaign planning, content generation, lead scoring, and market signal analysis to drive pipeline growth.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="agent-name">HR Agent</div>
-        <div class="agent-role">Hire to Retire</div>
-        <p class="agent-desc">Talent acquisition, onboarding, performance cycles, and workforce planning across the employee lifecycle.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="agent-name">Finance Agent</div>
-        <div class="agent-role">Record to Report</div>
-        <p class="agent-desc">Financial close, reporting, variance analysis, audit readiness, and real-time financial health signals.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
-        <div class="agent-name">Procurement Agent</div>
-        <div class="agent-role">Procure to Pay</div>
-        <p class="agent-desc">Vendor management, purchase approvals, invoice processing, spend analytics, and supplier risk monitoring.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-2.5 6h5L5 7z"/><path d="M19 7l-2.5 6h5L19 7z"/></svg></div>
-        <div class="agent-name">Legal Agent</div>
-        <div class="agent-role">Legal &amp; Compliance</div>
-        <p class="agent-desc">Contract review, regulatory monitoring, policy updates, and statutory deadline tracking across every jurisdiction you operate in.</p>
-      </div>
-      <div class="agent-card">
-        <div class="agent-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="agent-name">Governance Agent</div>
-        <div class="agent-role">Guardrails &amp; Trust</div>
-        <p class="agent-desc">Enforces approval flows, policy compliance, audit trails, and human-in-the-loop escalations across all agents.</p>
-      </div>
-    </div>
-  <div class="flagship">
-      <p class="flagship-chip">Flagship application on Helm</p>
-      <img class="flagship-logo" src="assets/matrix-logo.webp" loading="lazy" decoding="async" alt="Matrix: the Digital Chief of Staff" width="560" height="196">
-      <p class="flagship-desc">The agents run the functions. Matrix runs across all of them: observing enterprise health, prioritizing what needs a decision, and coordinating the roster on your behalf.</p>
-      <a href="matrix.html" class="flagship-cta">Explore Matrix &rarr;</a>
-    </div>
-    </div>
-</section>
-
-<section id="the-name" class="ayatt-sec section-pad">
-  <div class="section-wrap">
-    <div class="ayatt-inner">
-      <p class="ayatt-word">&#257;yatt</p>
-      <p class="ayatt-say">Pronounced eye-uht</p>
-      <div class="ayatt-rule"></div>
-      <p class="ayatt-def">From the Sanskrit word <em>Sv&#257;yatt</em>:<br>self-governing. Autonomous.<br>Answerable to itself.</p>
-      <p class="ayatt-body">We did not choose a name that describes what we build. We chose one that describes what we believe an enterprise should become. <strong>Autonomy without answerability is just risk moving faster.</strong> Every agent we ship carries a name, a boundary and a record, because self-governing was never meant to mean unsupervised.</p>
-    </div>
   </div>
 </section>
 
-<section id="founder" class="warm-bg section-pad">
-  <div class="section-wrap" role="main">
-    <div class="fdr">
-      <div>
-        <div class="fdr-photo">
-          <img src="assets/ravi-portrait.webp" alt="Ravi Teja Bommireddipalli, Founder and CEO of AyattAI, speaking at a keynote" width="900" height="1026">
-        </div>
-        <p class="fdr-name">Ravi Teja Bommireddipalli</p>
-        <p class="fdr-role">Founder &amp; CEO, AyattAI &middot; formerly Global CEO, Robosoft Technologies</p>
-      </div>
-      <div>
-        <p class="eyebrow eyebrow--sky">From the Founder</p>
-        <p class="fdr-quote">I have watched more transformations fail in the corridor than in the code. <em>That is why this one starts with your work, not our tool.</em></p>
-        <p class="fdr-body">Thirty years building enterprise systems. Seven as a global CEO, growing a private-equity-backed firm sevenfold. I have carried a P&amp;L, so I know what it costs to be wrong about a technology decision, and I know that most AI programs fail for reasons that have nothing to do with the model.</p>
-        <p class="fdr-body">On your engagement, I am in the room. Not a forward-deployed engineer and not an account manager, the person accountable for whether this works. <strong>That is the difference between buying software and having a partner who has run a business.</strong></p>
-        <div class="fdr-acts">
-          <a class="fdr-btn" href="#founder-film">Hear it from me &middot; 2 min &#9654;</a>
-          <a class="fdr-btn fdr-btn--ghost" href="https://www.linkedin.com/newsletters/ravipov-7418005987107958784/" target="_blank" rel="noopener noreferrer">Read #RaviPOV &rarr;</a>
-        </div>
-      </div>
+<section class="cvb" id="briefing">
+  <div class="cvb-in">
+    <p class="cvb-k">Where most people start</p>
+    <h2 class="cvb-h">One conversation, and you will know<br><em>whether this is for you.</em></h2>
+    <p class="cvb-p">An executive briefing is ninety minutes with the founder, not a demo reel and not a discovery call routed to a sales engineer. We walk one of your value streams, you hear where we would and would not put an agent, and you leave with a written view either way. There is no obligation on the other side of it.</p>
+    <div class="cvb-btns">
+      <a href="#contact" class="cvb-b1">Book an executive briefing &rarr;</a>
+      <a href="#contact" class="cvb-b2">Request the architecture brief</a>
     </div>
-    <div id="founder-film" style="margin:4rem auto 0;max-width:880px">
-      <div class="vid-fac" id="vid-fac" role="button" tabindex="0"
-           aria-label="Play: 30 Years in IT. One Startup. One Big Bet."
-           onclick="playFounderFilm()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playFounderFilm();}">
-        <div class="vid-play" id="vid-play">
-          <span class="vid-ring"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path d="M2 2 L18 11 L2 20 Z" fill="#3EB4E0"/></svg></span>
-          <span class="vid-t">30 Years in IT. One Startup. One Big Bet.</span>
-          <span class="vid-s">2 min &middot; in Ravi&rsquo;s own words</span>
-        </div>
-      </div>
-    </div>
+    <p class="cvb-fine">Not ready to talk? Read how we decide what to build, below.</p>
   </div>
 </section>
 
-<!-- ─── TRUST &amp; SECURITY ─── -->
-<section class="trs section-pad" id="trust">
+<section id="economics" class="eco-sec section-pad">
   <div class="section-wrap">
-    <div class="agents-header">
+    <p class="eyebrow eyebrow--sky centered">The economics</p>
+    <h2 class="section-title section-title--white centered">Your second hire<br>costs less than your first.</h2>
+    <p class="section-desc section-desc--steel centered">Nobody expects the second employee to be cheaper than the first. Digital ones are. Your team shares skills, so each new hire arrives already knowing part of the job.</p>
+    <div class="divider divider--center"></div>
+
+    <div class="eco-grid">
       <div>
-        <p class="eyebrow eyebrow--sky">Trust &amp; assurance</p>
-        <h2 class="section-title section-title--white">What your risk team<br>will want to see.</h2>
+        <p class="eco-h">Train a skill once.<br><em>Every hire after that already has it.</em></p>
+        <p class="eco-b">A digital employee isn't a monolith. It's a set of discrete skills: retrieve this, compare against that, generate the briefing, raise the alert. Some are unique to one role. <strong>Many are not.</strong></p>
+        <ol class="eco-steps">
+          <li>Discovery identifies every skill each new hire needs, and <strong>which ones your team already has.</strong></li>
+          <li>Shared skills are trained first, because each one pays back across several hires at once.</li>
+          <li>The next hire costs less than the last, because part of the job is <strong>already learned and already tested.</strong></li>
+        </ol>
       </div>
-      <p class="section-desc section-desc--steel">We are a young company asking for access to systems of record. That deserves a straight answer rather than a badge wall, so here is exactly where we stand today.</p>
+      <div>
+        <svg class="eco-svg" viewBox="0 0 460 340" role="img"
+             aria-label="Diagram: one shared skill built once is deployed into three separate agents, while agent-specific skills are built individually.">
+          <defs>
+            <marker id="ea" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+              <path d="M0,1 L6,5 L0,9" fill="none" stroke="#3EB4E0" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <text x="76" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#3EB4E0" text-anchor="middle">BUILT ONCE</text>
+          <rect x="8" y="40" width="136" height="52" rx="4" fill="rgba(62,180,224,.14)" stroke="#3EB4E0" stroke-opacity=".6"/>
+          <text x="76" y="63" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Shared skill</text>
+          <text x="76" y="80" font-size="11" fill="#B0C4D4" text-anchor="middle">e.g. deadline alerting</text>
+
+          <path d="M144 66 C 210 66, 210 76, 300 76" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+          <path d="M144 66 C 210 66, 210 170, 300 170" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+          <path d="M144 66 C 210 66, 210 264, 300 264" fill="none" stroke="#3EB4E0" stroke-width="1.4" stroke-opacity=".65" marker-end="url(#ea)"/>
+
+          <text x="384" y="26" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#8CA3B4" text-anchor="middle">DEPLOYED THREE TIMES</text>
+          <g>
+            <rect x="308" y="48" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="70" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Program Control</text>
+            <text x="380" y="88" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 2 skills of its own</text>
+          </g>
+          <g>
+            <rect x="308" y="142" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="164" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Procurement</text>
+            <text x="380" y="182" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 3 skills of its own</text>
+          </g>
+          <g>
+            <rect x="308" y="236" width="144" height="56" rx="4" fill="rgba(255,255,255,.05)" stroke="#FFF" stroke-opacity=".18"/>
+            <text x="380" y="258" font-size="12.5" font-weight="600" fill="#FFF" text-anchor="middle">Cost Estimator</text>
+            <text x="380" y="276" font-size="11" fill="#8CA3B4" text-anchor="middle">+ 1 skill of its own</text>
+          </g>
+
+          <line x1="8" y1="316" x2="452" y2="316" stroke="#FFF" stroke-opacity=".12"/>
+          <text x="230" y="334" font-size="12" fill="#B0C4D4" text-anchor="middle">You paid for one skill. Three hires use it.</text>
+        </svg>
+        <p class="eco-note">Illustrative. The actual ratio of shared to role-specific skills is established during discovery, before anything is committed.</p>
+      </div>
     </div>
-    <div class="trs-grid">
-      <div class="trs-card">
-        <p class="trs-k">Certification</p>
-        <span class="trs-status trs-status--prog">SOC 2 Type II &middot; in progress</span>
-        <div class="trs-t">Readiness underway, not yet certified.</div>
-        <p class="trs-d">We will not claim a certificate we do not hold. Our control set is documented and the readiness program is active. Current status, the control matrix and the remediation plan are available under NDA.</p>
-        <ul class="trs-list">
-          <li>Control documentation available for review</li>
-          <li>Named sub-processors disclosed on request</li>
-          <li>DPA and security questionnaires supported</li>
-          <li>Penetration testing on the platform</li>
-        </ul>
+
+    <div class="eco-model">
+      <div class="eco-card">
+        <div class="eco-card-t">You subscribe per digital employee</div>
+        <p class="eco-card-d">No enterprise-wide license to sign before you've seen anyone work. You subscribe to the agents you've actually hired, monthly, and add to the roster when you're ready.</p>
       </div>
-      <div class="trs-card">
-        <p class="trs-k">The stronger answer</p>
-        <span class="trs-status trs-status--live">Available today</span>
-        <div class="trs-t">Your data can stay inside your perimeter.</div>
-        <p class="trs-d">For most risk teams this matters more than a certificate. Run AyattAI in your own cloud account or entirely on premises, and our certification status stops being the control that protects you. Yours is.</p>
-        <ul class="trs-list">
-          <li>Client cloud: your AWS, Azure or GCP tenancy</li>
-          <li>Private on premises, inside your perimeter</li>
-          <li>Hybrid: reasoning out, sensitive data held in</li>
-          <li>Dedicated single-tenant instance</li>
-        </ul>
+      <div class="eco-card">
+        <div class="eco-card-t">You approve every hire</div>
+        <p class="eco-card-d">Every digital employee is scoped, priced and approved individually, on a published rate card. You set the pace and the headcount.</p>
       </div>
-      <div class="trs-card">
-        <p class="trs-k">Controls in the product</p>
-        <span class="trs-status trs-status--live">Shipping</span>
-        <div class="trs-t">Governance designed in, not added after.</div>
-        <p class="trs-d">Every request is classified, authorized and masked before a model sees it, and every action is recorded against a named agent and a named approver. Reads are broad. Writes are narrow, gated and signed.</p>
-        <ul class="trs-list">
-          <li>Data classification before anything moves</li>
-          <li>PII masked ahead of model inference</li>
-          <li>Model eligibility enforced by classification</li>
-          <li>Full audit trail on every write</li>
-          <li>Human approval gates on privileged actions</li>
-        </ul>
+      <div class="eco-card">
+        <div class="eco-card-t">You can stop at any point</div>
+        <p class="eco-card-d">Your existing team keeps working. There's no cliff, no all-or-nothing commitment, and no eighteen-month leap of faith.</p>
       </div>
     </div>
-    <p class="trs-note">A note on scale, since you are entitled to ask. We are deliberately small and deliberately senior: the people who scope your engagement are the people who deliver it, and the founder is accountable for the outcome. <strong>That is an advantage on judgment and a real constraint on capacity</strong>, so we take a small number of clients at a time and will tell you plainly if you are asking for more than we can carry.</p>
   </div>
 </section>
-
 
 <section id="integrations" class="integrations-bg section-pad-sm">
   <div class="section-wrap">
@@ -3096,6 +2725,402 @@ try {
   </div>
 </section>
 
+<section id="nervous-system" class="layers-bg section-pad" style="scroll-margin-top:72px">
+<section id="layers">
+  <div class="section-wrap">
+    <div class="layers-header">
+      <div>
+        <p class="eyebrow eyebrow--sky">About AyattAI</p>
+        <h2 class="section-title section-title--white">Seven layers.<br>One connected<br>enterprise.</h2>
+      </div>
+      <div>
+          <p class="section-desc section-desc--steel">Seven layers form the enterprise nervous system for AI: reasoning, memory, knowledge, awareness, action, governance and collaboration. Ethical guardrails and human-in-the-loop control are built into each one, not bolted on after.</p>
+        </div>
+    </div>
+    <div class="layers-grid">
+      <div class="layer-card">
+        <div class="layer-num">01 · Reasoning &amp; Planning</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+        <div class="layer-name">Intelligence</div>
+        <p class="layer-desc">LLMs interpret language, break down problems, plan sequences of work, and generate recommendations. The brain of the agentic system.</p>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">02 · Organizational Memory</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="layer-name">Memory</div>
+        <p class="layer-desc">Remembers patterns, prior decisions, enterprise history, and customer context, giving agents continuity instead of one-off responses.</p>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">03 · Company-Specific Context</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="layer-name">Knowledge</div>
+        <p class="layer-desc">Company policies, contracts, CRM records, and domain context brought into every decision so AI acts with enterprise-specific understanding.</p>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">04 · System Visibility</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="layer-name">Awareness</div>
+        <p class="layer-desc">Connects AI to enterprise systems and signals, observing workflows, tools, transactions, and real-world operating conditions.</p>
+      </div>
+    </div>
+    <div class="layers-row2">
+      <div class="layer-card">
+        <div class="layer-num">05 · Execution &amp; Intervention</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>
+        <div class="layer-name">Action</div>
+        <p class="layer-desc">Where AI becomes agentic. Agents recommend, initiate, and complete work, escalating exceptions to the right humans when needed.</p>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">06 · Guardrails &amp; Trust</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="layer-name">Governance</div>
+        <p class="layer-desc">Approvals, permissions, observability, policy controls, and auditability, ensuring enterprise AI is safe, trusted, compliant, and accountable.</p>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">07 · Agents Working Together</div>
+        <div class="layer-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="layer-name">Collaboration</div>
+        <p class="layer-desc">The highest value: multiple agents working across roles, teams, and processes to deliver outcomes end-to-end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="ai-strategy" class="mth-sec section-pad">
+  <div class="section-wrap">
+    <p class="eyebrow eyebrow--sky centered">AI Strategy &middot; Service 01</p>
+    <h2 class="section-title section-title--dark centered">We don't start with agents.<br>We start with your work.</h2>
+    <p class="section-desc section-desc--ink centered">Most AI programs begin by choosing a tool. Ours begins by mapping what your organization actually does, step by step, and only then asking which of those steps an agent should own. Five phases, ending in a ranked backlog you approve before anything gets built.</p>
+    <div class="divider divider--center"></div>
+
+    <svg class="mth-svg mth-svg-d" viewBox="0 0 1000 430" role="img"
+         aria-label="Methodology funnel: every workflow is inventoried, scored down to strong AI candidates, clustered into named agents, decomposed into skills, and ranked into a build backlog. Some skills are shared across several agents.">
+      <defs>
+        <marker id="mf" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.6" stroke-linecap="round"/>
+        </marker>
+      </defs>
+
+      <!-- phase labels -->
+      <g font-size="10" font-weight="700" letter-spacing="1.3" fill="#3EB4E0" text-anchor="middle">
+        <text x="100" y="22">PHASE 01</text><text x="300" y="22">PHASE 02</text>
+        <text x="500" y="22">PHASE 03</text><text x="700" y="22">PHASE 04</text>
+        <text x="900" y="22">PHASE 05</text>
+      </g>
+      <g font-family="'Playfair Display',serif" font-size="15" font-weight="700" fill="#1A2B3C" text-anchor="middle">
+        <text x="100" y="44">Value Stream</text><text x="300" y="44">Scoring</text>
+        <text x="500" y="44">Agents</text><text x="700" y="44">Skills</text>
+        <text x="900" y="44">Backlog</text>
+      </g>
+
+      <!-- 01 all workflows: wide -->
+      <g>
+        <rect x="34" y="72" width="132" height="240" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g fill="#FFF" stroke="#0D1E30" stroke-opacity=".14">
+          <rect x="46" y="84" width="108" height="20" rx="2"/><rect x="46" y="110" width="108" height="20" rx="2"/>
+          <rect x="46" y="136" width="108" height="20" rx="2"/><rect x="46" y="162" width="108" height="20" rx="2"/>
+          <rect x="46" y="188" width="108" height="20" rx="2"/><rect x="46" y="214" width="108" height="20" rx="2"/>
+          <rect x="46" y="240" width="108" height="20" rx="2"/><rect x="46" y="266" width="108" height="20" rx="2"/>
+        </g>
+        <text x="100" y="333" font-size="12" fill="#3D5166" text-anchor="middle">Every workflow,</text>
+        <text x="100" y="349" font-size="12" fill="#3D5166" text-anchor="middle">as it really runs</text>
+      </g>
+      <path d="M172 192 L196 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 02 scored: narrows -->
+      <g>
+        <rect x="234" y="110" width="132" height="164" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g stroke="#0D1E30" stroke-opacity=".14">
+          <rect x="246" y="122" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="148" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="174" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="200" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="226" width="108" height="20" rx="2" fill="#FFF"/>
+        </g>
+        <text x="300" y="295" font-size="12" fill="#3D5166" text-anchor="middle">3 or 4 &ldquo;yes&rdquo; answers</text>
+        <text x="300" y="311" font-size="12" fill="#3D5166" text-anchor="middle">= strong candidate</text>
+      </g>
+      <path d="M372 192 L396 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 03 agents: clustered -->
+      <g>
+        <rect x="434" y="122" width="132" height="140" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
+        <g stroke="#C9832A" stroke-opacity=".4" fill="#FFF">
+          <rect x="446" y="136" width="108" height="34" rx="3"/>
+          <rect x="446" y="178" width="108" height="34" rx="3"/>
+          <rect x="446" y="220" width="108" height="30" rx="3"/>
+        </g>
+        <g font-size="10.5" fill="#8A5A18" text-anchor="middle">
+          <text x="500" y="157">Named agent</text><text x="500" y="199">Named agent</text>
+          <text x="500" y="240">Named agent</text>
+        </g>
+        <text x="500" y="295" font-size="12" fill="#3D5166" text-anchor="middle">One decision-maker,</text>
+        <text x="500" y="311" font-size="12" fill="#3D5166" text-anchor="middle">one data context, one purpose</text>
+      </g>
+      <path d="M572 192 L596 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 04 skills: widens again, some shared -->
+      <g>
+        <rect x="634" y="88" width="132" height="208" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g stroke-opacity=".16" stroke="#0D1E30">
+          <rect x="646" y="100" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="148" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="172" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="196" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="220" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="244" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="268" width="108" height="18" rx="2" fill="#FFF"/>
+        </g>
+        <text x="700" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Retrieve &middot; analyze</text>
+        <text x="700" y="341" font-size="12" fill="#3D5166" text-anchor="middle">output &middot; act</text>
+      </g>
+      <path d="M772 192 L796 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 05 backlog: ranked, shared first -->
+      <g>
+        <rect x="834" y="88" width="132" height="208" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
+        <g stroke-opacity=".16" stroke="#0D1E30">
+          <rect x="846" y="100" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="148" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="172" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="196" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="220" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="244" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="268" width="108" height="18" rx="2" fill="#FFF"/>
+        </g>
+        <text x="900" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Ranked. Shared skills</text>
+        <text x="900" y="341" font-size="12" fill="#3D5166" text-anchor="middle">built first.</text>
+      </g>
+
+      <!-- the reuse argument, drawn -->
+      <path d="M700 300 C 700 380, 900 380, 900 300" fill="none" stroke="#3EB4E0"
+            stroke-width="1.3" stroke-opacity=".5" stroke-dasharray="4 3"/>
+      <text x="800" y="400" font-size="11.5" font-weight="600" fill="#3EB4E0" text-anchor="middle">
+        one skill, several agents &middot; build once</text>
+    </svg>
+
+    <svg class="mth-svg mth-svg-m" viewBox="0 0 380 700" role="img" aria-hidden="true">
+      <defs>
+        <marker id="mfm" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.8" stroke-linecap="round"/>
+        </marker>
+      </defs>
+
+      <g text-anchor="middle">
+        <text x="190" y="16" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 01</text>
+        <rect x="20" y="24" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="52" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Value Stream</text>
+        <text x="190" y="76" font-size="12" fill="#3D5166">Every workflow, as it really runs,</text>
+        <text x="190" y="94" font-size="12" fill="#3D5166">not as the process document claims.</text>
+        <path d="M190 116 L190 132" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="152" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 02</text>
+        <rect x="20" y="160" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="188" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Scoring</text>
+        <text x="190" y="212" font-size="12" fill="#3D5166">Four questions per step.</text>
+        <text x="190" y="230" font-size="12" fill="#3D5166">Three or four &ldquo;yes&rdquo; = strong candidate.</text>
+        <path d="M190 252 L190 268" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="288" font-size="10" font-weight="700" letter-spacing="1.1" fill="#C9832A">PHASE 03</text>
+        <rect x="20" y="296" width="340" height="86" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
+        <text x="190" y="324" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#8A5A18">Agents</text>
+        <text x="190" y="348" font-size="12" fill="#3D5166">Steps cluster into named agents</text>
+        <text x="190" y="366" font-size="12" fill="#3D5166">on all three signals at once.</text>
+        <path d="M190 388 L190 404" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="424" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 04</text>
+        <rect x="20" y="432" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="460" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Skills</text>
+        <text x="190" y="484" font-size="12" fill="#3D5166">Each agent breaks into skills:</text>
+        <text x="190" y="502" font-size="12" fill="#3D5166">retrieve, analyze, output, act.</text>
+        <path d="M190 524 L190 540" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="560" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 05</text>
+        <rect x="20" y="568" width="340" height="104" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
+        <text x="190" y="596" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Backlog</text>
+        <text x="190" y="620" font-size="12" fill="#3D5166">Ranked by impact &times; readiness.</text>
+        <text x="190" y="640" font-size="12" fill="#3EB4E0" font-weight="600">Shared skills built first:</text>
+        <text x="190" y="658" font-size="12" fill="#3EB4E0" font-weight="600">one skill serves several agents.</text>
+      </g>
+    </svg>
+
+    <div class="mth-legend">
+      <span class="mth-key"><span class="mth-sw" style="background:#E8F6FC;border:1px solid rgba(62,180,224,.5)"></span>
+        <b>Shared skill</b> &middot; reusable across agents</span>
+      <span class="mth-key"><span class="mth-sw" style="background:#FCF7F0;border:1px solid rgba(201,131,42,.4)"></span>
+        <b>Agent</b> &middot; a named operational role</span>
+    </div>
+
+    <div class="mth-more">
+      <p class="mth-more-p">The five phases above are the shape of it. The scoring questions, the
+        three clustering signals and the ranking rubric are all published: nothing about how we decide
+        what to build is proprietary, because a method you cannot inspect is a method you cannot
+        challenge.</p>
+      <a class="mth-more-a" href="ai-strategy.html">Read the full method &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services-bg section-pad">
+  <div class="section-wrap">
+    <div class="agents-header">
+      <div>
+        <p class="eyebrow eyebrow--sky">Services &middot; the on-ramp</p>
+        <h2 class="section-title section-title--white">The platform does the work.<br>These get you to it.</h2>
+      </div>
+      <p class="section-desc section-desc--steel">Three services, in sequence, and all of them finite. Strategy decides what should change. Process redesign defines how the work runs once part of the team is digital. Training equips your people to manage and govern it. Then they end, and what remains is the platform.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <div class="svc-name">AI Strategy</div>
+        <div class="svc-sub">From value stream to a ranked hiring plan for digital work.</div>
+        <div class="svc-line"></div>
+        <ul class="svc-list">
+          <li>Value stream and workflow inventory</li>
+          <li>Three-signal test for AI candidacy</li>
+          <li>Agent clustering and role definition</li>
+          <li>Governance, guardrails and decision rights</li>
+          <li>Ranked build backlog you approve</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Agentic Process Redesign</div>
+        <div class="svc-sub">Redesigning how your work runs when part of the team is digital.</div>
+        <div class="svc-line"></div>
+        <ul class="svc-list">
+          <li>Process rebuilt around a mixed team</li>
+          <li>Human and agent handoff design</li>
+          <li>Autonomy levels and approval flows</li>
+          <li>Agents built and put into production</li>
+          <li>Enterprise system integration</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">03</div>
+        <div class="svc-name">AI Training</div>
+        <div class="svc-sub">Equipping your people to work with, manage and govern AI.</div>
+        <div class="svc-line"></div>
+        <ul class="svc-list">
+          <li>Executive and leadership enablement</li>
+          <li>Practitioner cohorts and working sessions</li>
+          <li>Skill library and prompt discipline</li>
+          <li>Managing digital colleagues</li>
+          <li>Capability transfer, not dependency</li>
+        </ul>
+      </div>
+    </div>
+    <p class="svc-principle">Services stay under a quarter of our revenue, and that is a design
+      constraint rather than an accident. <strong>A vendor who earns most of its money from your
+      dependence has no reason to end it.</strong> We would rather be paid for a platform that keeps
+      working than for people who keep visiting, which is why every engagement above is scoped to
+      finish and why training exists to make us less necessary.</p>
+  </div>
+</section>
+
+<section id="the-name" class="ayatt-sec section-pad">
+  <div class="section-wrap">
+    <div class="ayatt-inner">
+      <p class="ayatt-word">&#257;yatt</p>
+      <p class="ayatt-say">Pronounced eye-uht</p>
+      <div class="ayatt-rule"></div>
+      <p class="ayatt-def">From the Sanskrit word <em>Sv&#257;yatt</em>:<br>self-governing. Autonomous.<br>Answerable to itself.</p>
+      <p class="ayatt-body">We did not choose a name that describes what we build. We chose one that describes what we believe an enterprise should become. <strong>Autonomy without answerability is just risk moving faster.</strong> Every agent we ship carries a name, a boundary and a record, because self-governing was never meant to mean unsupervised.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder" class="warm-bg section-pad">
+  <div class="section-wrap" role="main">
+    <div class="fdr">
+      <div>
+        <div class="fdr-photo">
+          <img src="assets/ravi-portrait.webp" alt="Ravi Teja Bommireddipalli, Founder and CEO of AyattAI, speaking at a keynote" width="900" height="1026">
+        </div>
+        <p class="fdr-name">Ravi Teja Bommireddipalli</p>
+        <p class="fdr-role">Founder &amp; CEO, AyattAI &middot; formerly Global CEO, Robosoft Technologies</p>
+      </div>
+      <div>
+        <p class="eyebrow eyebrow--sky">From the Founder</p>
+        <p class="fdr-quote">I have watched more transformations fail in the corridor than in the code. <em>That is why this one starts with your work, not our tool.</em></p>
+        <p class="fdr-body">Thirty years building enterprise systems. Seven as a global CEO, growing a private-equity-backed firm sevenfold. I have carried a P&amp;L, so I know what it costs to be wrong about a technology decision, and I know that most AI programs fail for reasons that have nothing to do with the model.</p>
+        <p class="fdr-body">On your engagement, I am in the room. Not a forward-deployed engineer and not an account manager, the person accountable for whether this works. <strong>That is the difference between buying software and having a partner who has run a business.</strong></p>
+        <div class="fdr-acts">
+          <a class="fdr-btn" href="#founder-film">Hear it from me &middot; 2 min &#9654;</a>
+          <a class="fdr-btn fdr-btn--ghost" href="https://www.linkedin.com/newsletters/ravipov-7418005987107958784/" target="_blank" rel="noopener noreferrer">Read #RaviPOV &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div id="founder-film" style="margin:4rem auto 0;max-width:880px">
+      <div class="vid-fac" id="vid-fac" role="button" tabindex="0"
+           aria-label="Play: 30 Years in IT. One Startup. One Big Bet."
+           onclick="playFounderFilm()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playFounderFilm();}">
+        <div class="vid-play" id="vid-play">
+          <span class="vid-ring"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path d="M2 2 L18 11 L2 20 Z" fill="#3EB4E0"/></svg></span>
+          <span class="vid-t">30 Years in IT. One Startup. One Big Bet.</span>
+          <span class="vid-s">2 min &middot; in Ravi&rsquo;s own words</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trs section-pad" id="trust">
+  <div class="section-wrap">
+    <div class="agents-header">
+      <div>
+        <p class="eyebrow eyebrow--sky">Trust &amp; assurance</p>
+        <h2 class="section-title section-title--white">What your risk team<br>will want to see.</h2>
+      </div>
+      <p class="section-desc section-desc--steel">We are a young company asking for access to systems of record. That deserves a straight answer rather than a badge wall, so here is exactly where we stand today.</p>
+    </div>
+    <div class="trs-grid">
+      <div class="trs-card">
+        <p class="trs-k">Certification</p>
+        <span class="trs-status trs-status--prog">SOC 2 Type II &middot; in progress</span>
+        <div class="trs-t">Readiness underway, not yet certified.</div>
+        <p class="trs-d">We will not claim a certificate we do not hold. Our control set is documented and the readiness program is active. Current status, the control matrix and the remediation plan are available under NDA.</p>
+        <ul class="trs-list">
+          <li>Control documentation available for review</li>
+          <li>Named sub-processors disclosed on request</li>
+          <li>DPA and security questionnaires supported</li>
+          <li>Penetration testing on the platform</li>
+        </ul>
+      </div>
+      <div class="trs-card">
+        <p class="trs-k">The stronger answer</p>
+        <span class="trs-status trs-status--live">Available today</span>
+        <div class="trs-t">Your data can stay inside your perimeter.</div>
+        <p class="trs-d">For most risk teams this matters more than a certificate. Run AyattAI in your own cloud account or entirely on premises, and our certification status stops being the control that protects you. Yours is.</p>
+        <ul class="trs-list">
+          <li>Client cloud: your AWS, Azure or GCP tenancy</li>
+          <li>Private on premises, inside your perimeter</li>
+          <li>Hybrid: reasoning out, sensitive data held in</li>
+          <li>Dedicated single-tenant instance</li>
+        </ul>
+      </div>
+      <div class="trs-card">
+        <p class="trs-k">Controls in the product</p>
+        <span class="trs-status trs-status--live">Shipping</span>
+        <div class="trs-t">Governance designed in, not added after.</div>
+        <p class="trs-d">Every request is classified, authorized and masked before a model sees it, and every action is recorded against a named agent and a named approver. Reads are broad. Writes are narrow, gated and signed.</p>
+        <ul class="trs-list">
+          <li>Data classification before anything moves</li>
+          <li>PII masked ahead of model inference</li>
+          <li>Model eligibility enforced by classification</li>
+          <li>Full audit trail on every write</li>
+          <li>Human approval gates on privileged actions</li>
+        </ul>
+      </div>
+    </div>
+    <p class="trs-note">A note on scale, since you are entitled to ask. We are deliberately small and deliberately senior: the people who scope your engagement are the people who deliver it, and the founder is accountable for the outcome. <strong>That is an advantage on judgment and a real constraint on capacity</strong>, so we take a small number of clients at a time and will tell you plainly if you are asking for more than we can carry.</p>
+  </div>
+</section>
+
 <section id="speaking" class="spk-sec section-pad">
   <div class="section-wrap">
     <div class="spk-grid">
@@ -3148,6 +3173,10 @@ try {
     <h2 class="section-title section-title--dark centered">Common questions.</h2>
     <div class="divider divider--center" style="margin-bottom:1rem"></div>
     <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Are you a platform company or a consultancy?<span class="faq-icon">+</span></div>
+        <div class="faq-answer">A platform company. AyattAI's revenue is recurring subscription against digital employees running in production, and services are held deliberately below a quarter of the total. The three services exist because software alone does not change how an organization works: someone has to decide which work should become an agent, redesign the process around a mixed team, and train the people who will manage it. Those engagements are scoped to finish. The platform is what you are left holding, and it is what you keep paying for.</div>
+      </div>
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">What is AyattAI?<span class="faq-icon">+</span></div>
         <div class="faq-answer">AyattAI is an enterprise agentic AI platform. It deploys cross-functional AI agents across CXO roles and business value streams, connecting goals, tasks, data, and decisions so AI agents collaborate and deliver measurable business outcomes.</div>
