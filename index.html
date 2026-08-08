@@ -1316,6 +1316,24 @@ html { scroll-padding-top: 92px; }
   border-top:1px solid var(--border)}
 .svc-principle strong{color:var(--sky);font-weight:600}
 
+/* ── what it costs ── */
+.eco-price{max-width:900px;margin:3.4rem auto 0;padding-top:2.8rem;border-top:1px solid var(--border)}
+.eco-price-k{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);text-align:center;margin-bottom:1.8rem}
+.eco-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);
+  border:1px solid var(--border)}
+.eco-price-cell{background:var(--navy2);padding:1.9rem 1.8rem}
+.eco-price-t{font-size:15.5px;font-weight:600;color:var(--white);margin-bottom:.6rem;
+  letter-spacing:-.02em}
+.eco-price-d{font-size:13px;line-height:1.7;font-weight:300;color:var(--steel)}
+.eco-price-note{max-width:66ch;margin:2rem auto 0;text-align:center;font-size:13.5px;line-height:1.8;
+  font-weight:300;color:var(--steel)}
+.eco-price-note strong{color:var(--sky);font-weight:600}
+@media(max-width:760px){
+  .eco-price-grid{grid-template-columns:1fr}
+  .eco-price-cell{padding:1.7rem 1.4rem;text-align:center}
+}
+
 /* ── mid-page conversion break ── */
 .cvb{background:var(--warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .cvb-in{max-width:840px;margin:0 auto;padding:4.6rem 2rem;text-align:center}
@@ -1620,6 +1638,8 @@ button:focus-visible, a:focus-visible {
 .nav-drop[data-open="true"] .nav-drop-panel{opacity:1;visibility:visible;transform:none}
 .nav-drop-panel a{display:block!important;height:auto!important;padding:10px 12px!important;
   border-radius:3px;border-bottom:0!important}
+.nav-drop-panel .nd-sep{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);padding:12px 12px 5px;margin-top:6px;border-top:1px solid var(--border)}
 .nav-drop-panel a:hover{background:rgba(62,180,224,.1);border-bottom:0!important}
 .nav-drop-panel .ndt{display:block;font-size:13px;font-weight:600;color:var(--white)}
 .nav-drop-panel .ndd{display:block;font-size:11px;color:var(--steel);margin-top:2px;line-height:1.45}
@@ -1936,9 +1956,10 @@ try {
             <a href="index.html#platforms"><span class="ndt">Helm</span><span class="ndd">The agent platform: agents by role, orchestrated by Flow</span></a>
             <a href="index.html#dataprism"><span class="ndt">Data Prism</span><span class="ndd">Data lake and semantic foundation</span></a>
             <a href="index.html#strata"><span class="ndt">Strata</span><span class="ndd">Machine learning and prediction</span></a>
+            <p class="nd-sep">Built on Helm</p>
+            <a href="matrix.html"><span class="ndt">Matrix</span><span class="ndd">The flagship application: your Digital Chief of Staff</span></a>
           </div>
     </div>
-    <a href="matrix.html" class="nav-featured">Matrix</a>
     <a href="index.html#agents">AI Agents</a>
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-arch">Architecture<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
@@ -1949,7 +1970,7 @@ try {
             <a href="index.html#trust"><span class="ndt">Trust &amp; Assurance</span><span class="ndd">Security, certification and deployment</span></a>
           </div>
     </div>
-    <a href="index.html#economics">Pricing</a>
+    <a href="index.html#economics">How You Buy</a>
     <div class="nav-drop">
       <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="nav-services">Services<svg class="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="nav-drop-panel" id="nav-services" role="menu">
@@ -2574,12 +2595,31 @@ try {
       </div>
       <div class="eco-card">
         <div class="eco-card-t">You approve every hire</div>
-        <p class="eco-card-d">Every digital employee is scoped, priced and approved individually, on a published rate card. You set the pace and the headcount.</p>
+        <p class="eco-card-d">Every digital employee is scoped, priced and approved individually against a fixed rate card, which we put in front of you before you commit to anything. You set the pace and the headcount.</p>
       </div>
       <div class="eco-card">
         <div class="eco-card-t">You can stop at any point</div>
         <p class="eco-card-d">Your existing team keeps working. There's no cliff, no all-or-nothing commitment, and no eighteen-month leap of faith.</p>
       </div>
+    </div>
+
+    <div class="eco-price">
+      <p class="eco-price-k">What a digital employee costs</p>
+      <div class="eco-price-grid">
+        <div class="eco-price-cell">
+          <div class="eco-price-t">One-time build</div>
+          <p class="eco-price-d">A fixed fee per agent to configure it to your process, integrate it and put it
+            into production. Flat, not hourly, so the scope risk sits with us rather than with you.</p>
+        </div>
+        <div class="eco-price-cell">
+          <div class="eco-price-t">Monthly subscription</div>
+          <p class="eco-price-d">A per-agent fee for as long as it works for you, set by scope and complexity.
+            This is the majority of what you pay us, and it is the part you can stop.</p>
+        </div>
+      </div>
+      <p class="eco-price-note">Across the first year the build is the minority of the cost by design: never
+        more than a quarter of it. <strong>We put the full rate card in front of you before you commit to
+        anything,</strong> and every agent is priced from it rather than negotiated case by case.</p>
     </div>
   </div>
 </section>
@@ -3296,14 +3336,14 @@ try {
     <a href="index.html#nervous-system" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Seven Layers</a>
     <a href="index.html#integrations" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Integrations</a>
     <a href="index.html#trust" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Trust &amp; Assurance</a>
-    <a href="index.html#economics" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Pricing</a>
+    <a href="index.html#economics" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">How You Buy</a>
     <a href="ai-strategy.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Strategy</a>
     <a href="index.html#services" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Services</a>
+    <a href="index.html#founder" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Founder</a>
+    <a href="index.html#the-name" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Name</a>
     <a href="index.html#case-study" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Case Study</a>
     <a href="press-release-first-production-rollout.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Press</a>
     <a href="ravipov.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">RaviPOV</a>
-    <a href="index.html#the-name" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Name</a>
-    <a href="index.html#founder" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Founder</a>
     <a href="index.html#contact" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Contact</a>
   </nav>
 </div>
