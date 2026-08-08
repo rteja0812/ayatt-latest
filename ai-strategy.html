@@ -3,9 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accessibility Statement | AyattAI</title>
-<meta name="description" content="AyattAI's commitment to web accessibility. We strive to meet WCAG 2.1 AA standards so our website is usable by everyone.">
-  <link rel="canonical" href="https://ayatt.ai/accessibility.html">
+<title>AI Strategy: How We Decide What to Build | AyattAI</title>
+<meta name="description" content="AyattAI's AI Strategy method, published in full: the four questions we score every workflow step against, the three signals a cluster must share to become an agent, and how the build backlog is ranked.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AyattAI">
+<meta property="og:title" content="AI Strategy: How We Decide What to Build | AyattAI">
+<meta property="og:description" content="Nothing about this method is proprietary. The scoring questions, clustering signals and ranking rubric, published in full.">
+<meta property="og:url" content="https://ayatt.ai/ai-strategy.html">
+<meta property="og:image" content="https://ayatt.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Strategy: How We Decide What to Build | AyattAI">
+<meta name="twitter:description" content="Nothing about this method is proprietary. The scoring questions, clustering signals and ranking rubric, published in full.">
+<meta name="twitter:image" content="https://ayatt.ai/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Strategy: How We Decide What to Build",
+  "description": "AyattAI's five-phase AI Strategy method published in full, including the four-question candidacy score, the three-signal agent clustering test, and the impact-by-readiness backlog rubric.",
+  "url": "https://ayatt.ai/ai-strategy.html",
+  "author": {"@type": "Person", "name": "Ravi Teja Bommireddipalli"},
+  "publisher": {"@type": "Organization", "name": "AyattAI", "url": "https://ayatt.ai"},
+  "isPartOf": {"@type": "WebSite", "url": "https://ayatt.ai"}
+}
+</script>
+
+<meta name="description" content="AyattAI's AI Strategy method, published in full: the four questions we score every workflow step against, the three signals a cluster must share to become an agent, and how the build backlog is ranked.">
+  <link rel="canonical" href="https://ayatt.ai/ai-strategy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -169,53 +195,191 @@ nav{position: fixed;
   </button>
 </nav>
 
+<style>
+/* ── methodology styles, mirrored from the homepage ── */
+.section-wrap { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+.eyebrow {
+.eyebrow--sky { color: var(--sky); }
+.eyebrow--gold { color: var(--gold); }
+.section-title {
+.section-title--white { color: var(--white); }
+.section-title--dark { color: var(--ink); }
+.section-desc {
+.section-desc--steel { color: var(--steel2); }
+.section-desc--ink { color: var(--ink2); }
+.section-desc.centered { margin-left: auto; margin-right: auto; }
+.divider {
+.divider--center { margin-left: auto; margin-right: auto; }
+.mth-more{max-width:62ch;margin:3rem auto 0;text-align:center;padding-top:2.2rem;
+.mth-more-p{font-size:14.5px;line-height:1.8;font-weight:300;color:var(--ink2)}
+.mth-more-a{display:inline-flex;align-items:center;min-height:44px;margin-top:1.2rem;
+.mth-more-a:hover{text-decoration:underline}
+.mth-sec{background:var(--ice)}
+.mth-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:3.2rem;
+.mth-step{padding:1.7rem 1.3rem;border-right:1px solid var(--border-light);position:relative}
+.mth-step:last-child{border-right:none}
+.mth-step--last{background:rgba(62,180,224,.06)}
+.mth-n{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.mth-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--ink);
+.mth-out{font-size:12px;color:var(--ink2);font-weight:300;line-height:1.55;margin-top:.6rem;
+.mth-sig{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.6rem}
+.mth-card{background:var(--white);border:1px solid var(--border-light);border-radius:4px;
+.mth-card-n{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
+.mth-card-t{font-size:15px;font-weight:700;color:var(--ink);margin-top:.6rem}
+.mth-card-d{font-size:13px;color:var(--ink2);font-weight:300;line-height:1.68;margin-top:.5rem}
+.mth-rule{max-width:74ch;margin:2.6rem auto 0;text-align:center;font-size:14px;line-height:1.75;
+.mth-rule strong{color:var(--ink);font-weight:600}
+  .mth-flow{grid-template-columns:1fr}
+  .mth-step{border-right:none;border-bottom:1px solid var(--border-light)}
+  .mth-step:last-child{border-bottom:none}
+  .mth-sig{grid-template-columns:1fr}
+.mth-svg{display:block;width:100%;height:auto;margin-top:3rem;overflow:visible}
+.mth-svg-m{display:none}
+.mth-legend{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.4rem;
+.mth-legend b{color:var(--ink);font-weight:600}
+.mth-key{display:inline-flex;align-items:center;gap:.5rem}
+.mth-sw{width:12px;height:12px;border-radius:2px;display:inline-block}
+.mth-q{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.6rem}
+.mth-qc{background:var(--white);border:1px solid var(--border-light);border-radius:4px;padding:1.3rem 1.2rem}
+.mth-qn{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--sky);line-height:1}
+.mth-qt{font-size:14px;font-weight:700;color:var(--ink);margin-top:.6rem;line-height:1.35}
+.mth-qd{font-size:12.5px;color:var(--ink2);font-weight:300;line-height:1.6;margin-top:.5rem}
+.mth-qgate{max-width:70ch;margin:1.5rem auto 0;text-align:center;font-size:13.5px;
+.mth-qgate strong{color:var(--ink);font-weight:600}
+.mth-quad{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-light);
+.mth-qd-cell{background:var(--white);padding:1.5rem 1.5rem}
+.mth-qd-cell--now{background:rgba(62,180,224,.07)}
+.mth-qd-k{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.mth-qd-t{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);
+.mth-qd-x{font-size:12.5px;color:var(--ink2);font-weight:300;line-height:1.65;margin-top:.5rem}
+.mth-axes{display:flex;justify-content:space-between;max-width:100%;margin-top:.8rem;
+  .mth-q{grid-template-columns:1fr 1fr}
+  .mth-quad{grid-template-columns:1fr}
+.mth-sec{background:var(--white)}
+.mth-flow,.mth-qc,.mth-card,.mth-quad .mth-qd-cell{background:var(--ice)}
+.section-desc.centered{max-width:660px}
+.mth-page{background:var(--white);padding:5rem 2rem 6rem}
+.mth-page-wrap{max-width:1000px;margin:0 auto}
+.mth-h{font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,44px);font-weight:700;
+  line-height:1.2;color:var(--ink);letter-spacing:-.022em;text-align:center}
+.mth-h em{font-style:italic;color:#1F7FA8}
+.mth-lede{font-size:16px;line-height:1.85;font-weight:300;color:var(--ink2);max-width:66ch;
+  margin:1.5rem auto 0;text-align:center}
+.mth-back{display:inline-flex;align-items:center;min-height:44px;color:var(--sky);font-size:13.5px;
+  font-weight:600;text-decoration:none;margin-top:3rem}
+.mth-back:hover{text-decoration:underline}
+.mth-sub-h{font-family:'Playfair Display',serif;font-size:clamp(22px,2.6vw,30px);font-weight:700;
+  color:var(--ink);letter-spacing:-.02em;margin:4.5rem 0 .6rem;text-align:center}
+.mth-sub-p{font-size:14.5px;line-height:1.8;font-weight:300;color:var(--ink2);max-width:62ch;
+  margin:0 auto 2rem;text-align:center}
+.mth-cta{background:var(--warm);border-top:1px solid var(--border-light);
+  padding:4.4rem 2rem;text-align:center;margin-top:5rem}
+.mth-cta-h{font-family:'Playfair Display',serif;font-size:clamp(23px,2.9vw,33px);font-weight:700;
+  color:var(--ink);letter-spacing:-.02em;line-height:1.3}
+.mth-cta-p{font-size:15px;line-height:1.8;font-weight:300;color:var(--ink2);max-width:56ch;
+  margin:1.2rem auto 2rem}
+.mth-cta-b{background:var(--sky);color:#fff;padding:14px 26px;border-radius:4px;font-size:13.5px;
+  font-weight:600;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.mth-cta-b:hover{background:var(--sky2)}
+</style>
+
 <div class="hero" id="main-content">
-  <p class="eyebrow">Legal</p>
-  <h1>Accessibility Statement</h1>
+  <p class="eyebrow">AI Strategy &middot; Service 01</p>
+  <h1>How we decide what to build</h1>
 </div>
 
-<main class="content" role="main">
+<main class="mth-page" role="main">
+  <div class="mth-page-wrap">
+    <h2 class="mth-h">Nothing about this method<br><em>is proprietary.</em></h2>
+    <p class="mth-lede">A method you cannot inspect is a method you cannot challenge. So here is the
+      whole thing: the four questions we score every workflow step against, the three signals a cluster
+      of steps must share before it becomes an agent, and the rubric we rank the resulting backlog
+      with. If you want to run it yourself, you can. Most of the value was never in the framework. It
+      is in having someone in the room who has been wrong before and remembers why.</p>
 
-  <p>AyattAI Inc. is committed to ensuring that <strong>ayatt.ai</strong> is accessible to all users, including those with disabilities. We believe the web should be open and usable by everyone.</p>
+    <h2 class="mth-sub-h">Phase 02 &middot; Scoring every step</h2>
+    <p class="mth-sub-p">Four questions per workflow step. The point of scoring is not to find as many
+      candidates as possible. It is to be able to say, with a reason, which steps should be left
+      alone.</p>
+<div class="mth-q">
+      <div class="mth-qc">
+        <div class="mth-qn">01</div>
+        <div class="mth-qt">Multi-source gathering?</div>
+        <p class="mth-qd">Does the step pull from more than one system, file or person before work can begin?</p>
+      </div>
+      <div class="mth-qc">
+        <div class="mth-qn">02</div>
+        <div class="mth-qt">Pattern or threshold?</div>
+        <p class="mth-qd">Does it involve comparing against targets, spotting anomalies, or applying consistent rules?</p>
+      </div>
+      <div class="mth-qc">
+        <div class="mth-qn">03</div>
+        <div class="mth-qt">Repeatable output?</div>
+        <p class="mth-qd">Does the output always take the same shape: a report, alert, summary or update?</p>
+      </div>
+      <div class="mth-qc">
+        <div class="mth-qn">04</div>
+        <div class="mth-qt">Weekly or more?</div>
+        <p class="mth-qd">Frequency is what turns a small saving into a material one. Daily is stronger still.</p>
+      </div>
+    </div>
+    <p class="mth-qgate">Three or four yes answers and the step is a <strong>strong candidate.</strong> Two and we watch it. Fewer and we leave it alone: <strong>most steps in most functions should not become agents,</strong> and saying so is the point of scoring them.</p>
 
-  <div class="divider"></div>
+    <div class="mth-sig">
+      <div class="mth-card">
+        <div class="mth-card-n">Signal one</div>
+        <div class="mth-card-t">Common decision-maker</div>
+        <p class="mth-card-d">The same person needs the output of every step in the cluster. Two decision-makers means two agents, however similar the underlying data.</p>
+      </div>
+      <div class="mth-card">
+        <div class="mth-card-n">Signal two</div>
+        <div class="mth-card-t">Common data context</div>
+        <p class="mth-card-d">The steps draw on substantially the same sources. Steps reaching into entirely different systems get evaluated for separation.</p>
+      </div>
+      <div class="mth-card">
+        <div class="mth-card-n">Signal three</div>
+        <div class="mth-card-t">Unified operational purpose</div>
+        <p class="mth-card-d">The steps serve one outcome. Steps serving unrelated outcomes get separated even when the same person runs both.</p>
+      </div>
+    </div>
 
-  <h2>Our Standard</h2>
-  <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>, the internationally recognized standard for web accessibility, and the standard required under the Americans with Disabilities Act (ADA), the UK Equality Act, and the EU European Accessibility Act.</p>
+    <p class="mth-rule">An agent is only created when a cluster of steps shares <strong>all three signals at once.</strong> And it is named for the operational role it performs, never the technology behind it, because an agent nobody on the floor can describe is an agent nobody on the floor will use.</p>
 
-  <h2>What We Have Done</h2>
-  <p>To meet WCAG 2.1 AA, we have implemented the following across all pages of ayatt.ai:</p>
-  <ul>
-    <li>All images include descriptive alternative text for screen readers</li>
-    <li>All pages declare the document language (<code>lang="en"</code>)</li>
-    <li>A skip-to-main-content link is present on every page for keyboard users</li>
-    <li>Visible focus indicators are provided for all interactive elements</li>
-    <li>All form fields include accessible labels</li>
-    <li>Navigation landmarks are marked up with ARIA roles</li>
-    <li>Color contrast ratios meet or exceed WCAG 2.1 AA requirements</li>
-    <li>The site is fully keyboard navigable without requiring a mouse</li>
-    <li>All pages are responsive and functional on mobile devices</li>
-    <li>Heading structure is logical and hierarchical on every page</li>
-  </ul>
+<div class="mth-quad">
+      <div class="mth-qd-cell mth-qd-cell--now">
+        <div class="mth-qd-k" style="color:var(--sky)">Build now</div>
+        <div class="mth-qd-t">High impact, ready</div>
+        <p class="mth-qd-x">Data available, access confirmed, logic understood. Commission immediately.</p>
+      </div>
+      <div class="mth-qd-cell">
+        <div class="mth-qd-k" style="color:var(--gold)">Prepare first</div>
+        <div class="mth-qd-t">High impact, not ready</div>
+        <p class="mth-qd-x">Worth building, but the data access has to be fixed before anyone writes a line of it.</p>
+      </div>
+      <div class="mth-qd-cell">
+        <div class="mth-qd-k" style="color:var(--sky)">Quick win</div>
+        <div class="mth-qd-t">Lower impact, ready</div>
+        <p class="mth-qd-x">Cheap to build. Runs alongside the high-impact work rather than instead of it.</p>
+      </div>
+      <div class="mth-qd-cell">
+        <div class="mth-qd-k" style="color:var(--steel)">Defer</div>
+        <div class="mth-qd-t">Lower impact, not ready</div>
+        <p class="mth-qd-x">Revisited in a later cycle. Naming this out loud is what stops scope drift.</p>
+      </div>
+    </div>
+    <p class="mth-qgate">Every skill is scored on impact and build readiness, one to five each. <strong>You sign the ranked backlog before anything is built</strong>, so the scope is yours, and so is the pace.</p>
 
-  <h2>Known Limitations</h2>
-  <p>We are continuously improving. The animated neural-pulse canvas in the hero sections is a decorative visual element and does not convey information. It has no impact on screen reader users. We are monitoring all pages for ongoing compliance.</p>
-
-  <h2>Third-Party Content</h2>
-  <p>Some pages embed third-party content including a Vimeo video player. While we request accessible versions where available, we cannot fully control the accessibility of third-party platforms. The Vimeo player includes its own accessibility controls.</p>
-
-  <h2>Feedback and Contact</h2>
-  <div class="contact-box">
-    <p>If you experience any difficulty accessing any part of ayatt.ai, or if you believe any content is not fully accessible, please contact us. We take all feedback seriously and will respond within 5 business days.</p>
-    <p style="margin-top:1rem"><strong>Email:</strong> <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a></p>
-    <p><strong>Subject line:</strong> Accessibility Feedback &middot; ayatt.ai</p>
-    <p><strong>Company:</strong> AyattAI Inc., Wesley Chapel, Florida, USA</p>
   </div>
 
-  <h2>Date</h2>
-  <p>This accessibility statement was last reviewed and updated on <strong>June 22, 2026</strong>.</p>
-
+  <div class="mth-cta">
+    <h2 class="mth-cta-h">Want this run on your value stream?</h2>
+    <p class="mth-cta-p">An executive briefing walks one of your processes end to end and gives you a
+      written view on where an agent belongs and where one does not.</p>
+    <a class="mth-cta-b" href="index.html#contact">Book an executive briefing &rarr;</a>
+    <p style="margin-top:2rem"><a class="mth-back" href="index.html#ai-strategy">&larr; Back to the five phases</a></p>
+  </div>
 </main>
+
 
 <footer>
   <p>&copy; 2026 AyattAI, Inc. &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="mailto:raviteja@ayatt.ai">raviteja@ayatt.ai</a></p>
