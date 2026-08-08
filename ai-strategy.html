@@ -1745,6 +1745,13 @@ button:focus-visible, a:focus-visible {
 .pg-back{display:inline-flex;align-items:center;min-height:44px;color:var(--sky);font-size:13px;
   font-weight:600;text-decoration:none;margin-top:1.8rem}
 .pg-back:hover{text-decoration:underline}
+.pg-k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);text-align:center;margin-bottom:.9rem}
+.pg-note{max-width:66ch;margin:2.6rem auto 0;text-align:center;font-size:14.5px;line-height:1.8;
+  font-weight:300;color:var(--ink2);padding-top:2.2rem;border-top:1px solid var(--border-light)}
+.pg-note strong{color:#1F7FA8;font-weight:600}
+.pg-block+.pg-block{padding-top:1rem;border-top:1px solid var(--border-light)}
+
 @media(max-width:640px){
   .pg-head{padding:120px 1.5rem 3.6rem}
   .pg-body{padding:3.4rem 1.5rem 1rem}
@@ -1807,16 +1814,204 @@ button:focus-visible, a:focus-visible {
   <p class="pg-head-k">AI Strategy &middot; Service 01</p>
   <h1 class="pg-head-h">Nothing about this method<br><em>is proprietary.</em></h1>
   <p class="pg-head-p">A method you cannot inspect is a method you cannot challenge. So here is the
-    whole of it: the four questions every workflow step is scored against, the three signals a cluster
-    of steps must share before it becomes an agent, and the rubric the resulting backlog is ranked
-    with. If you want to run it yourself, you can. The framework was never the scarce part.</p>
+    whole of it, all five phases: how we inventory your work, how every step is scored, how steps
+    become named agents, how agents break down into buildable pieces, and how the resulting backlog
+    is ranked. If you want to run it yourself, you can. The framework was never the scarce part.</p>
 </div>
 
 <main class="pg-body" role="main">
   <div class="pg-wrap">
 
+    <!-- overview -->
     <div class="pg-block">
-      <h2 class="pg-h2">Phase 02 &middot; Scoring every step</h2>
+      <h2 class="pg-h2">Five phases,<em> end to end.</em></h2>
+      <p class="pg-p">Every workflow is inventoried, scored against four questions, clustered into
+        named agents, decomposed into skills, and ranked into a build backlog you approve before
+        anything is built.</p>
+      <div class="pg-rule"></div>
+<svg class="mth-svg mth-svg-d" viewBox="0 0 1000 430" role="img"
+         aria-label="Methodology funnel: every workflow is inventoried, scored down to strong AI candidates, clustered into named agents, decomposed into skills, and ranked into a build backlog. Some skills are shared across several agents.">
+      <defs>
+        <marker id="mf" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.6" stroke-linecap="round"/>
+        </marker>
+      </defs>
+
+      <!-- phase labels -->
+      <g font-size="10" font-weight="700" letter-spacing="1.3" fill="#3EB4E0" text-anchor="middle">
+        <text x="100" y="22">PHASE 01</text><text x="300" y="22">PHASE 02</text>
+        <text x="500" y="22">PHASE 03</text><text x="700" y="22">PHASE 04</text>
+        <text x="900" y="22">PHASE 05</text>
+      </g>
+      <g font-family="'Playfair Display',serif" font-size="15" font-weight="700" fill="#1A2B3C" text-anchor="middle">
+        <text x="100" y="44">Value Stream</text><text x="300" y="44">Scoring</text>
+        <text x="500" y="44">Agents</text><text x="700" y="44">Skills</text>
+        <text x="900" y="44">Backlog</text>
+      </g>
+
+      <!-- 01 all workflows: wide -->
+      <g>
+        <rect x="34" y="72" width="132" height="240" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g fill="#FFF" stroke="#0D1E30" stroke-opacity=".14">
+          <rect x="46" y="84" width="108" height="20" rx="2"/><rect x="46" y="110" width="108" height="20" rx="2"/>
+          <rect x="46" y="136" width="108" height="20" rx="2"/><rect x="46" y="162" width="108" height="20" rx="2"/>
+          <rect x="46" y="188" width="108" height="20" rx="2"/><rect x="46" y="214" width="108" height="20" rx="2"/>
+          <rect x="46" y="240" width="108" height="20" rx="2"/><rect x="46" y="266" width="108" height="20" rx="2"/>
+        </g>
+        <text x="100" y="333" font-size="12" fill="#3D5166" text-anchor="middle">Every workflow,</text>
+        <text x="100" y="349" font-size="12" fill="#3D5166" text-anchor="middle">as it really runs</text>
+      </g>
+      <path d="M172 192 L196 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 02 scored: narrows -->
+      <g>
+        <rect x="234" y="110" width="132" height="164" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g stroke="#0D1E30" stroke-opacity=".14">
+          <rect x="246" y="122" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="148" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="174" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="200" width="108" height="20" rx="2" fill="#FFF"/>
+          <rect x="246" y="226" width="108" height="20" rx="2" fill="#FFF"/>
+        </g>
+        <text x="300" y="295" font-size="12" fill="#3D5166" text-anchor="middle">3 or 4 &ldquo;yes&rdquo; answers</text>
+        <text x="300" y="311" font-size="12" fill="#3D5166" text-anchor="middle">= strong candidate</text>
+      </g>
+      <path d="M372 192 L396 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 03 agents: clustered -->
+      <g>
+        <rect x="434" y="122" width="132" height="140" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
+        <g stroke="#C9832A" stroke-opacity=".4" fill="#FFF">
+          <rect x="446" y="136" width="108" height="34" rx="3"/>
+          <rect x="446" y="178" width="108" height="34" rx="3"/>
+          <rect x="446" y="220" width="108" height="30" rx="3"/>
+        </g>
+        <g font-size="10.5" fill="#8A5A18" text-anchor="middle">
+          <text x="500" y="157">Named agent</text><text x="500" y="199">Named agent</text>
+          <text x="500" y="240">Named agent</text>
+        </g>
+        <text x="500" y="295" font-size="12" fill="#3D5166" text-anchor="middle">One decision-maker,</text>
+        <text x="500" y="311" font-size="12" fill="#3D5166" text-anchor="middle">one data context, one purpose</text>
+      </g>
+      <path d="M572 192 L596 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 04 skills: widens again, some shared -->
+      <g>
+        <rect x="634" y="88" width="132" height="208" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <g stroke-opacity=".16" stroke="#0D1E30">
+          <rect x="646" y="100" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="148" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="172" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="196" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="220" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="646" y="244" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="646" y="268" width="108" height="18" rx="2" fill="#FFF"/>
+        </g>
+        <text x="700" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Retrieve &middot; analyze</text>
+        <text x="700" y="341" font-size="12" fill="#3D5166" text-anchor="middle">output &middot; act</text>
+      </g>
+      <path d="M772 192 L796 192" stroke="#8CA3B4" stroke-width="1.4" marker-end="url(#mf)"/>
+
+      <!-- 05 backlog: ranked, shared first -->
+      <g>
+        <rect x="834" y="88" width="132" height="208" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
+        <g stroke-opacity=".16" stroke="#0D1E30">
+          <rect x="846" y="100" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="124" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="148" width="108" height="18" rx="2" fill="#E8F6FC" stroke="#3EB4E0" stroke-opacity=".5"/>
+          <rect x="846" y="172" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="196" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="220" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="244" width="108" height="18" rx="2" fill="#FFF"/>
+          <rect x="846" y="268" width="108" height="18" rx="2" fill="#FFF"/>
+        </g>
+        <text x="900" y="325" font-size="12" fill="#3D5166" text-anchor="middle">Ranked. Shared skills</text>
+        <text x="900" y="341" font-size="12" fill="#3D5166" text-anchor="middle">built first.</text>
+      </g>
+
+      <!-- the reuse argument, drawn -->
+      <path d="M700 300 C 700 380, 900 380, 900 300" fill="none" stroke="#3EB4E0"
+            stroke-width="1.3" stroke-opacity=".5" stroke-dasharray="4 3"/>
+      <text x="800" y="400" font-size="11.5" font-weight="600" fill="#3EB4E0" text-anchor="middle">
+        one skill, several agents &middot; build once</text>
+    </svg>
+
+<svg class="mth-svg mth-svg-m" viewBox="0 0 380 700" role="img" aria-hidden="true">
+      <defs>
+        <marker id="mfm" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,1 L6,5 L0,9" fill="none" stroke="#8CA3B4" stroke-width="1.8" stroke-linecap="round"/>
+        </marker>
+      </defs>
+
+      <g text-anchor="middle">
+        <text x="190" y="16" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 01</text>
+        <rect x="20" y="24" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="52" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Value Stream</text>
+        <text x="190" y="76" font-size="12" fill="#3D5166">Every workflow, as it really runs,</text>
+        <text x="190" y="94" font-size="12" fill="#3D5166">not as the process document claims.</text>
+        <path d="M190 116 L190 132" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="152" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 02</text>
+        <rect x="20" y="160" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="188" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Scoring</text>
+        <text x="190" y="212" font-size="12" fill="#3D5166">Four questions per step.</text>
+        <text x="190" y="230" font-size="12" fill="#3D5166">Three or four &ldquo;yes&rdquo; = strong candidate.</text>
+        <path d="M190 252 L190 268" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="288" font-size="10" font-weight="700" letter-spacing="1.1" fill="#C9832A">PHASE 03</text>
+        <rect x="20" y="296" width="340" height="86" rx="3" fill="#FCF7F0" stroke="#C9832A" stroke-opacity=".34"/>
+        <text x="190" y="324" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#8A5A18">Agents</text>
+        <text x="190" y="348" font-size="12" fill="#3D5166">Steps cluster into named agents</text>
+        <text x="190" y="366" font-size="12" fill="#3D5166">on all three signals at once.</text>
+        <path d="M190 388 L190 404" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="424" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 04</text>
+        <rect x="20" y="432" width="340" height="86" rx="3" fill="#EDF2F6" stroke="#0D1E30" stroke-opacity=".1"/>
+        <text x="190" y="460" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Skills</text>
+        <text x="190" y="484" font-size="12" fill="#3D5166">Each agent breaks into skills:</text>
+        <text x="190" y="502" font-size="12" fill="#3D5166">retrieve, analyze, output, act.</text>
+        <path d="M190 524 L190 540" stroke="#8CA3B4" stroke-width="1.8" marker-end="url(#mfm)"/>
+
+        <text x="190" y="560" font-size="10" font-weight="700" letter-spacing="1.1" fill="#3EB4E0">PHASE 05</text>
+        <rect x="20" y="568" width="340" height="104" rx="3" fill="#FFF" stroke="#3EB4E0" stroke-opacity=".45"/>
+        <text x="190" y="596" font-family="'Playfair Display',serif" font-size="17" font-weight="700" fill="#1A2B3C">Backlog</text>
+        <text x="190" y="620" font-size="12" fill="#3D5166">Ranked by impact &times; readiness.</text>
+        <text x="190" y="640" font-size="12" fill="#3EB4E0" font-weight="600">Shared skills built first:</text>
+        <text x="190" y="658" font-size="12" fill="#3EB4E0" font-weight="600">one skill serves several agents.</text>
+      </g>
+    </svg>
+
+<div class="mth-legend">
+      <span class="mth-key"><span class="mth-sw" style="background:#E8F6FC;border:1px solid rgba(62,180,224,.5)"></span>
+        <b>Shared skill</b> &middot; reusable across agents</span>
+      <span class="mth-key"><span class="mth-sw" style="background:#FCF7F0;border:1px solid rgba(201,131,42,.4)"></span>
+        <b>Agent</b> &middot; a named operational role</span>
+    </div>
+
+    </div>
+
+    <!-- PHASE 01 -->
+    <div class="pg-block">
+      <p class="pg-k">Phase 01</p>
+      <h2 class="pg-h2">The value stream,<em> as it really runs.</em></h2>
+      <p class="pg-p">We inventory every step in the workflow as people actually perform it, not as
+        the process document claims it happens. This is done by sitting with the people who do the
+        work rather than by reading the SOP, because the gap between the two is usually where the
+        cost is hiding.</p>
+      <div class="pg-rule"></div>
+      <div class="pg-note">
+        <p>Nothing is judged in this phase and nothing is proposed. The only output is an honest map:
+        every step, who performs it, what it needs before it can start, and what it produces.
+        <strong>If the map is wrong, everything downstream of it is wrong,</strong> which is why this
+        phase is not compressed to save time.</p>
+      </div>
+    </div>
+
+    <!-- PHASE 02 -->
+    <div class="pg-block">
+      <p class="pg-k">Phase 02</p>
+      <h2 class="pg-h2">Scoring<em> every step.</em></h2>
       <p class="pg-p">Four questions per workflow step. The point of scoring is not to find as many
         candidates as possible. It is to be able to say, with a reason, which steps should be left
         alone.</p>
@@ -1845,7 +2040,17 @@ button:focus-visible, a:focus-visible {
     </div>
     <p class="mth-qgate">Three or four yes answers and the step is a <strong>strong candidate.</strong> Two and we watch it. Fewer and we leave it alone: <strong>most steps in most functions should not become agents,</strong> and saying so is the point of scoring them.</p>
 
-    <div class="mth-sig">
+    
+    </div>
+
+    <!-- PHASE 03 -->
+    <div class="pg-block">
+      <p class="pg-k">Phase 03</p>
+      <h2 class="pg-h2">Clustering steps<em> into named agents.</em></h2>
+      <p class="pg-p">Strong candidates do not each become an agent. They are grouped, and a group
+        only earns agent status when it shares all three signals below at once.</p>
+      <div class="pg-rule"></div>
+<div class="mth-sig">
       <div class="mth-card">
         <div class="mth-card-n">Signal one</div>
         <div class="mth-card-t">Common decision-maker</div>
@@ -1865,6 +2070,34 @@ button:focus-visible, a:focus-visible {
 
     <p class="mth-rule">An agent is only created when a cluster of steps shares <strong>all three signals at once.</strong> And it is named for the operational role it performs, never the technology behind it, because an agent nobody on the floor can describe is an agent nobody on the floor will use.</p>
 
+
+    </div>
+
+    <!-- PHASE 04 -->
+    <div class="pg-block">
+      <p class="pg-k">Phase 04</p>
+      <h2 class="pg-h2">Breaking each agent<em> into buildable pieces.</em></h2>
+      <p class="pg-p">An agent is a role, not a program. Before anything is built, each one is
+        decomposed into the discrete skills it needs: retrieve, analyze, produce an output, take an
+        action.</p>
+      <div class="pg-rule"></div>
+      <div class="pg-note">
+        <p>This is the phase that makes the economics work. Some skills belong to one agent alone.
+        Many are shared, and a shared skill is built once and reused by every agent that needs it.
+        <strong>One skill, several agents, built once.</strong> Which skills are shared and which are
+        role-specific is established here, before any commitment is made, rather than discovered
+        halfway through a build.</p>
+      </div>
+    </div>
+
+    <!-- PHASE 05 -->
+    <div class="pg-block">
+      <p class="pg-k">Phase 05</p>
+      <h2 class="pg-h2">Ranking<em> the backlog.</em></h2>
+      <p class="pg-p">Every item is scored on impact and on build readiness, one to five each, which
+        places it in one of four quadrants. Shared skills are built first, because each one pays back
+        across several agents at once.</p>
+      <div class="pg-rule"></div>
 <div class="mth-quad">
       <div class="mth-qd-cell mth-qd-cell--now">
         <div class="mth-qd-k" style="color:var(--sky)">Build now</div>
@@ -1899,7 +2132,7 @@ button:focus-visible, a:focus-visible {
   <p class="pg-cta-p">An executive briefing walks one of your processes end to end and gives you a
     written view on where an agent belongs and, just as usefully, where one does not.</p>
   <a class="pg-cta-b" href="index.html#contact">Book an executive briefing &rarr;</a>
-  <p><a class="pg-back" href="index.html#ai-strategy">&larr; Back to the five phases</a></p>
+  <p><a class="pg-back" href="index.html#ai-strategy">&larr; Back to the homepage summary</a></p>
 </div>
 
 <!-- ─── FOOTER ─── -->
