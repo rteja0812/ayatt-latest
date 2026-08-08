@@ -178,7 +178,23 @@ footer{background:#080F18;border-top:1px solid var(--border);padding:2.5rem;text
 .footer-copy{font-size:11px;color:var(--steel);padding-top:1.2rem;border-top:1px solid var(--border)}
 
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--navy2);border-top:1px solid var(--border);color:var(--steel2);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;z-index:9999;font-size:13px}
-#mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:999;flex-direction:column;align-items:center;justify-content:center}
+#mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:999;
+  flex-direction:column;align-items:stretch;justify-content:flex-start;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#mm-close{position:sticky;top:0;z-index:2;display:flex;justify-content:flex-end;
+  padding:14px 18px;background:var(--navy);border-bottom:1px solid var(--border)}
+#mm-close button{background:none;border:none;cursor:pointer;font-size:26px;color:var(--steel2);
+  line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+#mobile-menu nav{display:flex;flex-direction:column;align-items:stretch;width:100%;
+  padding:.5rem 0 3.5rem}
+#mobile-menu nav a{font-size:16.5px;color:var(--steel2);text-decoration:none;padding:13px 24px;
+  width:100%;text-align:center;border-bottom:1px solid var(--border);min-height:44px;
+  display:flex;align-items:center;justify-content:center}
+#mobile-menu nav a:active{background:rgba(62,180,224,.1)}
+#mobile-menu .mm-k{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);padding:20px 24px 7px;text-align:center}
+#mobile-menu a.mm-cta{margin:1.4rem 24px 0;background:var(--sky);color:#fff;font-weight:600;
+  border-radius:4px;border-bottom:0;padding:15px 24px}
 
 @media(max-width:1200px){
   .nav-links{display:none}
@@ -630,26 +646,32 @@ html:has(body.has-announce) .arc-rail { top: 148px; }
 </footer>
 
 <div id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
-  <button onclick="toggleMenu()" style="position:absolute;top:20px;right:24px;background:none;border:none;cursor:pointer;font-size:28px;color:var(--steel2);line-height:1">✕</button>
-  <nav style="display:flex;flex-direction:column;align-items:center;gap:0;width:100%;padding-top:60px">
-    <a href="index.html#platforms" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Helm</a>
-    <a href="index.html#dataprism" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Data Prism</a>
-    <a href="index.html#strata" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Strata</a>
-    <a href="matrix.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Matrix</a>
-    <a href="index.html#agents" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Agents</a>
-    <a href="index.html#architecture" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Capability Stack</a>
-    <a href="index.html#nervous-system" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Seven Layers</a>
-    <a href="index.html#integrations" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Integrations</a>
-    <a href="index.html#trust" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Trust &amp; Assurance</a>
-    <a href="index.html#economics" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">How You Buy</a>
-    <a href="ai-strategy.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">AI Strategy</a>
-    <a href="index.html#services" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Services</a>
-    <a href="index.html#founder" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Founder</a>
-    <a href="index.html#the-name" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">The Name</a>
-    <a href="index.html#case-study" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Case Study</a>
-    <a href="press-release-first-production-rollout.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Press</a>
-    <a href="ravipov.html" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">RaviPOV</a>
-    <a href="index.html#contact" onclick="toggleMenu()" style="font-size:18px;color:var(--steel2);text-decoration:none;padding:16px 0;width:100%;text-align:center;border-bottom:1px solid var(--border)">Contact</a>
+  <div id="mm-close"><button onclick="toggleMenu()" aria-label="Close navigation menu">&#10005;</button></div>
+  <nav aria-label="Mobile navigation">
+    <p class="mm-k">Platform</p>
+    <a href="index.html#platforms" onclick="toggleMenu()">Helm</a>
+    <a href="index.html#dataprism" onclick="toggleMenu()">Data Prism</a>
+    <a href="index.html#strata" onclick="toggleMenu()">Strata</a>
+    <a href="matrix.html" onclick="toggleMenu()">Matrix</a>
+    <p class="mm-k">Agents</p>
+    <a href="index.html#agents" onclick="toggleMenu()">AI Agents</a>
+    <p class="mm-k">Architecture</p>
+    <a href="index.html#architecture" onclick="toggleMenu()">The Capability Stack</a>
+    <a href="index.html#nervous-system" onclick="toggleMenu()">The Seven Layers</a>
+    <a href="index.html#integrations" onclick="toggleMenu()">Integrations</a>
+    <a href="index.html#trust" onclick="toggleMenu()">Trust &amp; Assurance</a>
+    <p class="mm-k">How you buy</p>
+    <a href="index.html#economics" onclick="toggleMenu()">The commercial model</a>
+    <p class="mm-k">Services</p>
+    <a href="ai-strategy.html" onclick="toggleMenu()">AI Strategy</a>
+    <a href="index.html#services" onclick="toggleMenu()">All three services</a>
+    <p class="mm-k">Company</p>
+    <a href="index.html#founder" onclick="toggleMenu()">Founder</a>
+    <a href="index.html#the-name" onclick="toggleMenu()">The Name</a>
+    <a href="index.html#case-study" onclick="toggleMenu()">Case Study</a>
+    <a href="press-release-first-production-rollout.html" onclick="toggleMenu()">Press</a>
+    <a href="ravipov.html" onclick="toggleMenu()">RaviPOV</a>
+    <a href="index.html#contact" onclick="toggleMenu()" class="mm-cta">Contact</a>
   </nav>
 </div>
 
